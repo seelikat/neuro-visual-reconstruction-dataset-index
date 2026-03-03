@@ -29,6 +29,8 @@ This is a **living document**. If you know of additional datasets or have correc
 
 ## Criteria for Reconstruction Datasets
 
+This index contains dataset that are either suitable or have been commonly used for reconstruction research. 
+
 Not every fMRI dataset that contains visual stimuli is suitable for reconstruction research. Many datasets were originally collected for other purposes (for example category decoding or representation analysis).
 
 Here are suggested criteria to take into account when evaluating whether to use a particular neuroimaging dataset for your project.
