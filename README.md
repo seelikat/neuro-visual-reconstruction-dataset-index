@@ -7,7 +7,7 @@ This guide is primarily aimed at researchers from AI and machine learning backgr
 This is a **living document**. If you know of additional datasets or have corrections, please open an issue or start a discussion.
 
 ## Table of Contents
-1. [Basics: Decoding vs. reconstruction vs. identification](#basics)
+1. [Basics: Identification vs. Decoding vs. Reconstruction](#basic-distinction)
 2. [Criteria for Reconstruction Datasets](#criteria-for-reconstruction-datasets)
 3. [Image Stimulus Datasets](#image-stimulus-datasets)
    - [vim-1 – Naturalistic Grayscale Images](#vim-1--naturalistic-grayscale-images)
