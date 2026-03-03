@@ -15,7 +15,7 @@ This is a **living document**. If you know of additional datasets or have correc
    - [BRAINS – Handwritten Characters](#brains--handwritten-characters)
    - [Generic Object Decoding](#generic-object-decoding)
    - [BOLD5000](#bold5000)
-   - [NSD](#nsd)
+   - [NSD - Natural Scenes Dataset](#nsd)
    - [cneuromod-THINGS](#cneuromod-things)
    - (...)
 4. [Video Stimulus Datasets](#video-stimulus-datasets)
