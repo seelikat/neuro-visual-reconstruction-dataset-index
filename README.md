@@ -6,6 +6,25 @@ This guide is primarily aimed at researchers from AI and machine learning backgr
 
 This is a **living document**. If you know of additional datasets or have corrections, please open an issue or start a discussion.
 
+## Table of Contents
+1. [Basics: Decoding vs. reconstruction vs. identification](#basics)
+2. [Criteria for Reconstruction Datasets](#criteria-for-reconstruction-datasets)
+3. [Image Stimulus Datasets](#image-stimulus-datasets)
+   - [vim-1 – Naturalistic Grayscale Images](#vim-1--naturalistic-grayscale-images)
+   - [10x10 Binary Patterns](#10x10-binary-patterns)
+   - [BRAINS – Handwritten Characters](#brains--handwritten-characters)
+   - [Generic Object Decoding](#generic-object-decoding)
+   - [BOLD5000](#bold5000)
+   - [NSD](#nsd)
+   - [cneuromod-THINGS](#cneuromod-things)
+   - (...)
+4. [Video Stimulus Datasets](#video-stimulus-datasets)
+   - [vim-2 – Naturalistic Video Clips](#vim-2--naturalistic-video-clips)
+   - [studyforrest – Forrest Gump Movie](#studyforrest--forrest-gump-movie)
+   - [cneuromod](#cneuromod)
+   - [Doctor Who](#doctorwho)
+   - (...)
+5. [Handling Hemodynamic Delay](#handling-hemodynamic-delay)
 
 
 ## Citation
