@@ -1,6 +1,6 @@
 # Neuroimaging Datasets for Visual Perception Reconstruction
 
-This repository indexes open neuroimaging datasets suitable for reconstructing visual perception **from human fMRI data**. Each dataset is summarized with relevant details, citations, and access links.
+This repository indexes open neuroimaging datasets suitable for reconstructing visual perception **from human fMRI data**. 
 
 This guide is primarily aimed at researchers from AI and machine learning backgrounds who may not be familiar with neuroimaging methodology. Reconstruction from neuroimaging data has recently gained popularity at major AI conferences, but many approaches fall into **common traps** that are well known within neuroscience. These pitfalls can lead to misleading results, often due to misunderstandings about the nature of fMRI data or the limitations of datasets originally collected for other research questions. For a detailed discussion of such issues in recent reconstruction pipelines, see: Shirakawa, K. et al. (2025). [*Spurious reconstruction from brain activity*](https://www.sciencedirect.com/science/article/pii/S0893608025003946), _Neural Networks_ .
 
@@ -26,6 +26,27 @@ This is a **living document**. If you know of additional datasets or have correc
    - (...)
 5. [fMRI Data and Hemodynamic Delay](#fmri-data-and-hemodynamic-delay)
 
+
+## Criteria for Reconstruction Datasets
+
+Not every fMRI dataset that contains visual stimuli is suitable for reconstruction research. Many datasets were originally collected for other purposes (for example category decoding or representation analysis).
+
+Here are suggested criteria to take into account when evaluating whether to use a particular neuroimaging dataset for your project.
+
+- **Train–test independence**  
+  Training and test stimuli should be visually and semantically distinct. If both sets contain highly similar images or share the same object categories or semantic clusters, models may simply learn to classify stimuli into known clusters instead of reconstructing novel images.
+
+- **Stimulus diversity**  
+  Reconstruction models must generalize beyond the training set. Datasets with limited semantic diversity restrict the feature space that models can learn. If your test set is truly independent (see first point), this limitation will typically become visible in reconstruction quality.
+
+- **Repetitions and signal-to-noise ratio (SNR)**  
+  fMRI signals are noisy. Many reconstruction-oriented datasets therefore include many repeated presentations of the test stimuli (_resampling_). Averaging across repetitions improves signal quality (SNR) and makes voxel-level patterns more reliable. Single-shot reconstruction is rarely seen outside invasive (implant) recording contexts and even there often produces substantially lower quality than reconstructions from resampled stimuli. If your pipeline is strong enough, however, it is worth trying.
+
+- **Copyright and availability of stimulus files**  
+  Reconstruction requires access to the original images or videos. Datasets where stimulus material cannot be redistributed (for example due to copyright restrictions) can be difficult to use in practice. Journals have occasionally required researchers to redraw copyrighted stimuli by hand, which is not ideal for presenting reconstruction results.
+
+- **Smoothing in preprocessing**  
+  Check the preprocessing description of the dataset. One standard preprocessing step from cognitive neuroscience is heavy spatial smoothing — essentially applying a Gaussian filter across the voxel matrix. This degrades the fine-grained spatial information that ML-based pattern analysis requires. For reconstruction projects it is particularly important that such voxel-level activity patterns remain intact. Note that as an ML researcher you may not easily be able to modify the extensive preprocessing and GLM pipeline yourself without assistance from someone with fMRI expertise.
 
 
 ## fMRI Data and Hemodynamic Delay
