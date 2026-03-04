@@ -86,6 +86,8 @@ Here are suggested criteria to take into account when evaluating whether to use 
 
 ### vim-1 - Naturalistic Grayscale Images
 
+![vim-1 samples](vim1_samples.png)
+
 | Attribute | Details |
 |---|---|
 | **Stimulus type** | naturalistic grayscale images |
@@ -181,6 +183,8 @@ Participants viewed natural images drawn from three common computer vision datas
 - Uses a slow fMRI design, which produces relatively clean single-trial BOLD responses.
 
 ### GOD - Generic Object Decoding
+
+![Generic Object Decoding](horikawa_samples.png)
 
 | Attribute | Details |
 |---|---|
