@@ -101,11 +101,36 @@ Here are suggested criteria to take into account when evaluating whether to use 
 Two participants viewed natural grayscale images while maintaining fixation. Images were presented inside a circular aperture. 
 
 **Notes**
-- The **“MNIST of computational visual neuroscience”** because of its small size, clean design, and wide use in encoding and reconstruction. Many reconstruction and encoding model projects use this dataset as a first test.
+- The **“MNIST of computational visual neuroscience”** because of its small size, clean design, high number (13) of test repetitions, and wide use in encoding and reconstruction. Many reconstruction and encoding model projects use this dataset as a first test.
 - The dataset was originally used to demonstrate **voxel-wise encoding models** and do stimulus identification by inverting them.
-- The high number of repetitions of the test images (13) produces clean signal useful for reconstruction experiments.
 - Easy-to-use ROI masks for early visual cortex, mid/higher level regions also covered. 
 
+
+## Video Stimulus Datasets
+
+### vim-2 – Naturalistic Video Clips
+
+| Attribute | Details |
+|---|---|
+| **Stimulus type** | naturalistic videos (movie clips) |
+| **Stimuli** | ~7200 training timepoints, 540 test timepoints |
+| **Repetitions** | train: 1x, test: 10x |
+| **Subjects** | 3 |
+| **Brain regions** | visual cortex |
+| **Main publication** | [Nishimoto et al., 2011](https://doi.org/10.1016/j.cub.2011.08.031) |
+| **Data access** | [CRCNS dataset page](https://crcns.org/data-sets/vc/vim-2) |
+
+**Experiment**
+
+Three participants viewed natural movie clips while maintaining fixation. Videos were presented in grayscale and slowed to half speed to better match the hemodynamic delay of the BOLD signal.
+
+**Notes**
+**Reconstruction from Nishimoto 2011**  
+[![Nishimoto 2011 reconstruction video](https://img.youtube.com/vi/nsjDnYxJ0bo/0.jpg)](https://www.youtube.com/watch?v=nsjDnYxJ0bo)
+
+- The dataset was originally used to demonstrate **voxel-wise encoding models** with motion energy features, and did reconstruction to demonstrate the power of these features to represent brain activity. 
+- Similar high quality and easy to use to vim-1.
+- Some **train–test overlap** has been reported, see [Shirakawa et al., 2025]([https://arxiv.org/abs/2405.10078](https://www.sciencedirect.com/science/article/pii/S0893608025003946)).
 
 ## fMRI Data and Hemodynamic Delay
 
