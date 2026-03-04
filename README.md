@@ -44,8 +44,6 @@ These terms are now often conflated. In foundational reconstruction and decoding
 
   Decoding is scientifically useful because it tests whether information about a stimulus or mental state is present in a brain region. However, it does not imply that the full visual content can be recovered. 
 
-  Many recent papers labeled as “reconstruction” are effectively performing n-way decoding: they decode a category or latent representation and then use a generative model to produce a visually plausible sample consistent with the predicted class. Note that n-way decoding is not exactly difficult and has long been solved. 
-
   Many recent papers labeled as “reconstruction” are effectively performing n-way decoding: they decode a category or latent representation and then use a generative model to produce a visually plausible sample inside the predicted class. This remains a restricted classification problem. Similar n-way decoding setups have long been standard in the MVPA literature and can achieve quite high performance when the candidate set is limited.
 
 - **Identification (stimulus level)**  
