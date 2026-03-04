@@ -157,7 +157,7 @@ Three participants viewed natural movie clips while maintaining fixation. Videos
 
 **Notes**
 
-- Reconstruction from Nishimoto 2011  
+- Reconstruction from Nishimoto 2011 (YouTube link)  
 [![Nishimoto 2011 reconstruction video](https://img.youtube.com/vi/nsjDnYxJ0bo/0.jpg)](https://www.youtube.com/watch?v=nsjDnYxJ0bo)
 - The dataset was originally used to demonstrate encoding models with motion energy features. Reconstruction was done to demonstrate the power of these features to represent brain activity. 
 - Similar high quality and easy to use as vim-1.
