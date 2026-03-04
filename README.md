@@ -29,30 +29,30 @@ This is a **living document**. If you know of additional datasets or have correc
 
 ## Basics: Identification vs. Decoding vs. Reconstruction
 
-These terms are now often conflated. In foundational reconstruction and decoding literature their separation is stricter for good reasons: the tasks differ in difficulty, failure modes, and what can be concluded from and achieved with a result and method. 
+These terms are now often conflated. In foundational reconstruction and decoding literature their separation has been strict for good reasons: the tasks differ in difficulty, failure modes, and what can be concluded from and achieved with a result and method. 
 
-**True reconstruction requires potential to generalise to stimuli or categories that were not present during training.** If the correct answer (also implicitly) must be selected from a predefined candidate category or image set, the wording is _decoding_ or _identification_, not reconstruction. 
+**True reconstruction requires potential to generalise to stimuli that were not present during training.** If the correct answer is (also implicitly) selected from a predefined candidate category or image set, the wording is _decoding_ or _identification_, not reconstruction. 
 
-| Neuroscience term | ML framing | Search space |
-|---|---|---|
-| **Decoding** | classification | predefined label/category set |
-| **Identification** | retrieval | finite candidate images |
-| **Reconstruction** | generative inverse problem | open set of possible stimuli |
+| Neuroscience term | ML framing | Search space | Difficulty |
+|---|---|---|---|
+| **Decoding** | classification | predefined label/category set | easy |
+| **Identification** | retrieval | finite candidate images | moderate |
+| **Reconstruction** | generative inverse problem | open set of possible stimuli | hard |
 
 - **Decoding (category level)**  
- Decoding refers to predicting (classifying) pre-defined labels or cognitive states from brain activity patterns. This type of classification has long been used for [neuroscientific insight](https://www.cell.com/neuron/fulltext/S0896-6273(15)00432-8). In multivariate pattern analysis (MVPA), voxel activity patterns are treated as feature vectors and classifiers are trained to distinguish experimental conditions (for example risky vs. safe decision, add vs. subtract, face vs. house, rule A vs. rule B).
+ Decoding refers to predicting (classifying) pre-defined labels or cognitive states from brain activity patterns. This type of classification has long been used for [neuroscientific insight](https://www.cell.com/neuron/fulltext/S0896-6273(15)00432-8). In multivariate pattern analysis (MVPA), voxel activity patterns are treated as feature vectors and classifiers are trained to distinguish experimental conditions (for example risky vs. safe decision, add vs. subtract, rule A vs. rule B).
 
   Decoding is scientifically useful because it tests whether information about a stimulus or mental state is present in a brain region. However, it does not imply that the full visual content can be recovered. 
 
   Many recent papers labeled as “reconstruction” are effectively performing n-way decoding: they decode a category and then use a generative model to produce a visually plausible sample inside the predicted class. This can look convincing, but remains a restricted classification problem. Similar n-way decoding setups have long been standard in the MVPA literature and can achieve quite high performance when the candidate set is limited.
 
 - **Identification (stimulus level)**  
-  Identification refers to selecting which stimulus was shown from a finite set of candidates based on brain activity. For example, given N possible images, the task is to determine which one produced the observed brain response. While useful, it remains a selection problem within a predefined set of alternatives. High performance does not necessarily imply that the model can reconstruct arbitrary unseen stimuli.
+  Identification refers to selecting which stimulus was shown from a finite set of candidates based on brain activity. For example, given N possible images, the task is to determine which one produced the observed brain response. While interesting and useful, particularly within large stimulus sets, it remains a selection problem within a predefined set.
 
 - **Reconstruction (open-set stimulus inference)**
   Reconstruction aims to rebuild the stimulus itself from brain activity, generalizing to **novel stimuli outside the training set**. Because the space of possible visual stimuli is essentially infinite, this is a substantially harder problem than decoding or identification.
 
-  A long-term motivation for reconstruction research is the possibility of recovering **internally generated visual experiences**, such as mental imagery or even [**dreams**](https://www.science.org/doi/10.1126/science.1234330). In these settings there is obviously no predefined candidate set of images to choose from, which is why the distinction between decoding, identification, and reconstruction is considered important in literature.
+  A long-term motivation for reconstruction research is the possibility of recovering **internally generated visual experiences**, such as mental imagery or even [**dreams**](https://www.science.org/doi/10.1126/science.1234330). In these settings there is obviously no predefined candidate set of images to choose from.
 
 
 ## Criteria for Reconstruction Datasets
