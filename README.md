@@ -78,6 +78,35 @@ Here are suggested criteria to take into account when evaluating whether to use 
 - **Smoothing in preprocessing**  
   Check the preprocessing description of the dataset. One standard preprocessing step from cognitive neuroscience is heavy spatial smoothing, i.e. essentially applying a Gaussian filter across the voxel matrix. This degrades the fine-grained spatial information that ML-based pattern analysis requires. For reconstruction projects it is particularly important that such voxel-level activity patterns remain intact. Note that as an ML researcher you may not easily be able to modify the extensive preprocessing and GLM pipeline yourself without assistance from someone with fMRI expertise, in order to exclude this step.
 
+- **Fixation** 
+  Most visual neuroimaging experiments require participants to **fixate on a point in the center of the screen** during stimulus presentation. This is important because large parts of the visual system are **retinotopically organized** (a distorted retina-reflecting map). If participants freely move their eyes, the same image stimulates different parts of this cortical map. Eye movements can introduce strong confounds: models may end up decoding **eye position on the cortical map** and not stimulus-related cortical patterns. There is debate about the strict necessity of fixation though. It also reduces natural viewing behavior and may suppress activity in higher-level visual areas. In general, **reconstruction on free-viewing datasets should be approached with caution.**
+
+## Image Stimulus Datasets
+
+### vim-1 – Naturalistic Grayscale Images
+
+| Attribute | Details |
+|---|---|
+| **Description** | fMRI responses to natural grayscale images, with fixation |
+| **Subjects** | 2 |
+| **Stimulus type** | static images |
+| **Stimuli** | 1750 training images, 120 test images |
+| **Repetitions** | train: 2x, test: 13x |
+| **Visual coverage** | circularly masked images |
+| **Brain regions** | visual cortex V1-V4, LatOcc, extrastriate (unspecified) regions |
+| **Main publication** | [Kay et al., 2008](https://doi.org/10.1038/nature06713) |
+| **Data access** | [CRCNS dataset page](https://crcns.org/data-sets/vc/vim-1) |
+
+**Experiment**
+Two participants viewed natural grayscale images while maintaining fixation. Images were presented inside a circular aperture. 
+
+**Notes**
+- The **“MNIST of computational visual neuroscience”** because of its small size, clean design, and wide use in encoding and reconstruction.
+- The dataset was originally used to demonstrate **voxel-wise encoding models** and do stimulus identification by inverting them.
+- The large number of repetitions for the test images (13) produces clean signal useful for reconstruction experiments.
+- Easy-to-use ROI masks for early visual cortex are provided. 
+- Many reconstruction and encoding model projects use this dataset as a first test.
+
 
 ## fMRI Data and Hemodynamic Delay
 
