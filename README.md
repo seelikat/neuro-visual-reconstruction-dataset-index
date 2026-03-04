@@ -125,12 +125,12 @@ Two participants viewed natural grayscale images while maintaining fixation. Ima
 Three participants viewed natural movie clips while maintaining fixation. Videos were presented in grayscale and slowed to half speed to better match the hemodynamic delay of the BOLD signal.
 
 **Notes**
-**Reconstruction from Nishimoto 2011**  
-[![Nishimoto 2011 reconstruction video](https://img.youtube.com/vi/nsjDnYxJ0bo/0.jpg)](https://www.youtube.com/watch?v=nsjDnYxJ0bo)
 
-- The dataset was originally used to demonstrate **voxel-wise encoding models** with motion energy features, and did reconstruction to demonstrate the power of these features to represent brain activity. 
-- Similar high quality and easy to use to vim-1.
-- Some **train–test overlap** has been reported, see [Shirakawa et al., 2025]([https://arxiv.org/abs/2405.10078](https://www.sciencedirect.com/science/article/pii/S0893608025003946)).
+- Reconstruction from Nishimoto 2011  
+[![Nishimoto 2011 reconstruction video](https://img.youtube.com/vi/nsjDnYxJ0bo/0.jpg)](https://www.youtube.com/watch?v=nsjDnYxJ0bo)
+- The dataset was originally used to demonstrate encoding models with motion energy features. Reconstruction was done to demonstrate the power of these features to represent brain activity. 
+- Similar high quality and easy to use as vim-1.
+- Some train–test overlap has been reported, see [Shirakawa et al., 2025](https://www.sciencedirect.com/science/article/pii/S0893608025003946).
 
 ## fMRI Data and Hemodynamic Delay
 
