@@ -10,6 +10,7 @@ This guide is primarily aimed at researchers from AI and machine learning backgr
 3. [Image Stimulus Datasets](#image-stimulus-datasets)
    - [vim-1 – Naturalistic Grayscale Images](#vim-1--naturalistic-grayscale-images)
    - [BRAINS – Handwritten Characters](#brains--handwritten-characters)
+   - [BOLD5000](#bold5000)
    - [GOD - Generic Object Decoding](#god-generic-object-decoding)
    - [NSD - Natural Scenes Dataset](#nsd-natural-scenes-dataset)
 4. [Video Stimulus Datasets](#video-stimulus-datasets)
@@ -129,6 +130,28 @@ Participants viewed the handwritten characters B, R, A, I, N, S while maintainin
 
 The stimulus space is MNIST-like structured and small. Reconstruction experiments focus on details in character shape. Generalization capabilities should not be expected, but it can be used to investigate new models and study fine-grained structural questions including class bias. 
 
+### BOLD5000 – Large Natural Image Dataset
+
+| Attribute | Details |
+|---|---|
+| **Stimulus type** | naturalistic images (SUN, COCO, ImageNet) |
+| **Stimuli** | ~5200 images |
+| **Repetitions** | most 1×, subset of 113 3×+ |
+| **Subjects** | 4 |
+| **Brain coverage** | 3T whole-brain |
+| **ROIs** | visual cortex |
+| **Visual field coverage** | ~4.6° visual angle |
+| **Main publication** | [Chang et al., 2019](https://doi.org/10.1038/s41597-019-0052-3) |
+| **Data access** | https://bold5000.org |
+
+**Experiment**
+
+Participants viewed natural images drawn from three common computer vision datasets (SUN scenes, COCO, and ImageNet). Each image was presented for 1s followed by a 9s of fixation, allowing the BOLD signal to return to baseline before the next image.
+
+**Notes**
+
+- Large and diverse stimulus set covering scenes, multi-object scenes, and single-object images.   
+- Uses a slow fMRI design, which produces relatively clean single-trial BOLD responses.
 
 ### GOD - Generic Object Decoding
 
