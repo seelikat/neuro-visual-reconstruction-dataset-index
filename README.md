@@ -130,7 +130,7 @@ Participants viewed natural images from the **MS COCO dataset** during long-term
 - One of the largest and highest-quality human fMRI datasets currently available.
 - Widely used for encoding models, representational analysis, and large-scale brain–DNN comparisons.
 - Provides whole-brain coverage, high spatial resolution (7T), and extensive metadata.
-- Includes additional resources such as an [imagery experiment](https://arxiv.org/abs/2506.06898). 
+- Includes additional resources such as an [imagery experiment](https://arxiv.org/abs/2506.06898) and [synthetic images](https://www.nature.com/articles/s41467-026-69345-9).
 
 **Note for reconstruction research**
 
