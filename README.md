@@ -73,6 +73,12 @@ Here are suggested criteria to take into account when evaluating whether to use 
 - **Fixation**  
   Most visual neuroimaging experiments require participants to **fixate on a point in the center of the screen** during stimulus presentation. This is important because large parts of the visual system are retinotopically organized (a distorted retina-reflecting map). If participants freely move their eyes, the same image stimulates different parts of this cortical map. Eye movements can introduce strong confounds: models may end up decoding eye position on the cortical map and not stimulus-related cortical patterns. There is debate about the strict necessity of fixation though. It also reduces natural viewing behavior and may suppress activity in higher-level visual areas. In general, reconstruction on free-viewing datasets should be approached with caution.
 
+- **Number of subjects**  
+  Fine-grained functional organization varies substantially across individuals. For this reason, many reconstruction projects prefer datasets with many images shown to few healthy individuals ([deep sampling](https://doi.org/10.1016/j.cobeha.2020.12.008)) rather than those with few images for many subjects. There are efforts to learn across-individuals.
+
+- **Visual field coverage**  
+  Visual field coverage determines how much of the visual cortex map is stimulated. Larger stimuli (=higher visual field coverage) that cover more of the visual field activate a larger portion. For reconstruction research this matters greatly. When stimuli cover more of the visual field, voxels carry more fine-grained visual information, particularly in early visual cortex. Datasets with larger visual field coverage are therefore generally preferred for reconstruction.
+
 ## Image Stimulus Datasets
 
 ### vim-1 - Naturalistic Grayscale Images
