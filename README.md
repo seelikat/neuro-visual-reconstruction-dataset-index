@@ -72,7 +72,7 @@ For video datasets the situation is more complicated, because the stimulus is co
 
 ## Citation
 
-If you found this index useful and say thanks or otherwise want to cite it, please use:
+If you found this index useful and want to cite it, please use:
 
 Seeliger, K. (2026). Neuro-Visual Reconstruction Dataset Index.  
 Zenodo. https://doi.org/xxxx
