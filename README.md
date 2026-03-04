@@ -15,7 +15,7 @@ This is a **living document**. If you know of additional datasets or have correc
    - [BRAINS – Handwritten Characters](#brains--handwritten-characters)
    - [Generic Object Decoding](#generic-object-decoding)
    - [BOLD5000](#bold5000)
-   - [NSD - Natural Scenes Dataset](#nsd)
+   - [NSD - Natural Scenes Dataset](#nsd-natural-scenes-dataset)
    - [cneuromod-THINGS](#cneuromod-things)
    - (...)
 4. [Video Stimulus Datasets](#video-stimulus-datasets)
@@ -83,7 +83,7 @@ Here are suggested criteria to take into account when evaluating whether to use 
 
 ## Image Stimulus Datasets
 
-### vim-1 – Naturalistic Grayscale Images
+### vim-1 - Naturalistic Grayscale Images
 
 | Attribute | Details |
 |---|---|
@@ -107,7 +107,7 @@ Two participants viewed natural grayscale images while maintaining fixation. Ima
 - Broad semantic categories.
 
 
-### Natural Scenes Dataset (NSD)
+### NSD - Natural Scenes Dataset
 
 | Attribute | Details |
 |---|---|
