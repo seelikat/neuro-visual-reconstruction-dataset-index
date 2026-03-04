@@ -103,7 +103,38 @@ Two participants viewed natural grayscale images while maintaining fixation. Ima
 **Notes**
 - The **“MNIST of computational visual neuroscience”** because of its small size, clean design, high number (13) of test repetitions, and wide use in encoding and reconstruction. Many reconstruction and encoding model projects use this dataset as a first test.
 - The dataset was originally used to demonstrate **voxel-wise encoding models** and do stimulus identification by inverting them.
-- Easy-to-use ROI masks for early visual cortex, mid/higher level regions also covered. 
+- Easy-to-use ROI masks for early visual cortex, mid/higher level regions also covered.
+- Broad semantic categories.
+
+
+### Natural Scenes Dataset (NSD)
+
+| Attribute | Details |
+|---|---|
+| **Stimulus type** | natural color images (MS COCO) |
+| **Stimuli** | ~73,000 unique images total |
+| **Images per subject** | ~10,000 unique images |
+| **Repetitions** | 3x both train/test |
+| **Subjects** | 8 |
+| **Scanner** | 7T fMRI (high-res) |
+| **Brain coverage** | whole brain |
+| **Main publication** | [Allen et al., 2022](https://doi.org/10.1038/s41593-021-00962-x) |
+| **Data access** | https://naturalscenesdataset.org |
+
+**Experiment**
+
+Participants viewed natural images from the **MS COCO dataset** during long-term scanning sessions (30–40 sessions per participant). Each subject saw ~10,000 unique images repeated three times. About **1,000 images are shared across all subjects** for cross-subject analysis. 
+
+**Notes**
+
+- One of the **largest and highest-quality human fMRI datasets** currently available.
+- Widely used for **encoding models, representational analysis, and large-scale brain–DNN comparisons**.
+- Provides **whole-brain coverage**, high spatial resolution (7T), and extensive metadata.
+- Includes additional resources such as an [https://arxiv.org/abs/2506.06898](imagery experiment). 
+
+**Note for reconstruction research**
+
+The dataset was **not originally designed for reconstruction experiments**. The standard train/test split contains strong semantic clustering and substantial similarity between training and test images within the same MS COCO categories. This can inflate apparent reconstruction performance (see [Shirakawa et al., 2025](https://www.sciencedirect.com/science/article/pii/S0893608025003946)). For reconstruction studies it is advisable to create alternative splits where **test stimuli contain categories not present during training**, or where semantic and visual overlap between training and test images is minimized.
 
 
 ## Video Stimulus Datasets
