@@ -12,7 +12,7 @@ This is a **living document**. If you know of additional datasets or have correc
 3. [Image Stimulus Datasets](#image-stimulus-datasets)
    - [vim-1 – Naturalistic Grayscale Images](#vim-1--naturalistic-grayscale-images)
    - [BRAINS – Handwritten Characters](#brains--handwritten-characters)
-   - [G.O.D. - Generic Object Decoding](#god-generic-object-decoding)
+   - [GOD - Generic Object Decoding](#god-generic-object-decoding)
    - [NSD - Natural Scenes Dataset](#nsd-natural-scenes-dataset)
    - [BOLD5000](#bold5000)
 4. [Video Stimulus Datasets](#video-stimulus-datasets)
@@ -102,7 +102,7 @@ Two participants viewed natural grayscale images while maintaining fixation. Ima
 - Broad semantic categories.
 
 
-### G.O.D. - Generic Object Decoding
+### GOD - Generic Object Decoding
 
 | Attribute | Details |
 |---|---|
@@ -121,12 +121,12 @@ Participants viewed natural object images from ImageNet categories while maintai
 
 **Notes**
 
-- Specifically designed for reconstruction research. 
+- Specifically designed with reconstruction in mind. 
 - Strict train–test category separation, which reduces visual and semantic overlap between training and test stimuli.
 
 **Note for reconstruction research**
 
-Because the test categories are not present during training, this dataset provides a useful benchmark for evaluating whether reconstruction models can generalize beyond the training categories.
+Because the test categories are not present during training, this dataset provides a useful benchmark for evaluating whether reconstruction models can generalize beyond the training categories. A small set of non-naturalistic abstract stimuli (e.g., a cross) from this data has been used widely to demonstrate reconstruction capability outside the (naturalistic) training distributions. 
 
 
 ### NSD - Natural Scenes Dataset
