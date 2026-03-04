@@ -79,7 +79,7 @@ Here are suggested criteria to take into account when evaluating whether to use 
   Check the preprocessing description of the dataset. One standard preprocessing step from cognitive neuroscience is heavy spatial smoothing, i.e. essentially applying a Gaussian filter across the voxel matrix. This degrades the fine-grained spatial information that ML-based pattern analysis requires. For reconstruction projects it is particularly important that such voxel-level activity patterns remain intact. Note that as an ML researcher you may not easily be able to modify the extensive preprocessing and GLM pipeline yourself without assistance from someone with fMRI expertise, in order to exclude this step.
 
 - **Fixation**  
-  Most visual neuroimaging experiments require participants to **fixate on a point in the center of the screen** during stimulus presentation. This is important because large parts of the visual system are **retinotopically organized** (a distorted retina-reflecting map). If participants freely move their eyes, the same image stimulates different parts of this cortical map. Eye movements can introduce strong confounds: models may end up decoding **eye position on the cortical map** and not stimulus-related cortical patterns. There is debate about the strict necessity of fixation though. It also reduces natural viewing behavior and may suppress activity in higher-level visual areas. In general, **reconstruction on free-viewing datasets should be approached with caution.**
+  Most visual neuroimaging experiments require participants to **fixate on a point in the center of the screen** during stimulus presentation. This is important because large parts of the visual system are retinotopically organized (a distorted retina-reflecting map). If participants freely move their eyes, the same image stimulates different parts of this cortical map. Eye movements can introduce strong confounds: models may end up decoding eye position on the cortical map and not stimulus-related cortical patterns. There is debate about the strict necessity of fixation though. It also reduces natural viewing behavior and may suppress activity in higher-level visual areas. In general, reconstruction on free-viewing datasets should be approached with caution.
 
 ## Image Stimulus Datasets
 
@@ -102,7 +102,7 @@ Two participants viewed natural grayscale images while maintaining fixation. Ima
 
 **Notes**
 - The **“MNIST of computational visual neuroscience”** because of its small size, clean design, high number (13) of test repetitions, and wide use in encoding and reconstruction. Many reconstruction and encoding model projects use this dataset as a first test.
-- The dataset was originally used to demonstrate **voxel-wise encoding models** and do stimulus identification by inverting them.
+- The dataset was originally used to demonstrate voxel-wise encoding models and do stimulus identification by inverting them.
 - Easy-to-use ROI masks for early visual cortex, mid/higher level regions also covered.
 - Broad semantic categories.
 
@@ -123,7 +123,7 @@ Two participants viewed natural grayscale images while maintaining fixation. Ima
 
 **Experiment**
 
-Participants viewed natural images from the **MS COCO dataset** during long-term scanning sessions (30–40 sessions per participant). Each subject saw ~10,000 unique images repeated three times. About 1,000 images are shared across all subjects for cross-subject analysis. 
+Participants viewed natural images from the **MS COCO dataset** during long-term scanning sessions (30–40 sessions per participant) while maintaining fixation. Each subject saw ~10,000 unique images repeated three times. About 1,000 images are shared across all subjects for cross-subject analysis. 
 
 **Notes**
 
