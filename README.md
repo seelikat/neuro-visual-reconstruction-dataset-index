@@ -49,7 +49,7 @@ These terms are now often conflated. In foundational reconstruction and decoding
 - **Identification (stimulus level)**  
   Identification refers to selecting which stimulus was shown from a finite set of candidates based on brain activity. For example, given N possible images, the task is to determine which one produced the observed brain response. While interesting and useful, particularly within large stimulus sets, it remains a selection problem within a predefined set.
 
-- **Reconstruction (open-set stimulus inference)**
+- **Reconstruction (open-set stimulus inference)**  
   Reconstruction aims to rebuild the stimulus itself from brain activity, generalizing to **novel stimuli outside the training set**. Because the space of possible visual stimuli is essentially infinite, this is a substantially harder problem than decoding or identification.
 
   A long-term motivation for reconstruction research is the possibility of recovering **internally generated visual experiences**, such as mental imagery or even [**dreams**](https://www.science.org/doi/10.1126/science.1234330). In these settings there is obviously no predefined candidate set of images to choose from.
@@ -123,12 +123,12 @@ Two participants viewed natural grayscale images while maintaining fixation. Ima
 
 **Experiment**
 
-Participants viewed natural images from the **MS COCO dataset** during long-term scanning sessions (30–40 sessions per participant). Each subject saw ~10,000 unique images repeated three times. About **1,000 images are shared across all subjects** for cross-subject analysis. 
+Participants viewed natural images from the **MS COCO dataset** during long-term scanning sessions (30–40 sessions per participant). Each subject saw ~10,000 unique images repeated three times. About 1,000 images are shared across all subjects for cross-subject analysis. 
 
 **Notes**
 
-- One of the largest and highest-quality human fMRI datasets** currently available.
-- Widely used for encoding models, representational analysis, and large-scale brain–DNN comparisons**.
+- One of the largest and highest-quality human fMRI datasets currently available.
+- Widely used for encoding models, representational analysis, and large-scale brain–DNN comparisons.
 - Provides whole-brain coverage, high spatial resolution (7T), and extensive metadata.
 - Includes additional resources such as an [imagery experiment](https://arxiv.org/abs/2506.06898). 
 
