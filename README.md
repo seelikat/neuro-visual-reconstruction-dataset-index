@@ -4,8 +4,6 @@ This repository indexes open neuroimaging datasets for reconstructing visual per
 
 This guide is primarily aimed at researchers from AI and machine learning backgrounds who may not be familiar with neuroimaging methodology. Reconstruction from neuroimaging data has recently gained popularity at major AI conferences, but many approaches fall into **common traps** that are well known within neuroscience. These pitfalls can lead to misleading results, often due to misunderstandings about the nature of fMRI data or the limitations of datasets originally collected for other research questions. For a detailed discussion of such issues in recent reconstruction pipelines, see: Shirakawa, K. et al. (2025). [*Spurious reconstruction from brain activity*](https://www.sciencedirect.com/science/article/pii/S0893608025003946), _Neural Networks_ .
 
-This is a **living document**. If you know of additional datasets or have corrections, please open an issue or start a discussion.
-
 ## Table of Contents
 1. [Basics: Identification vs. Decoding vs. Reconstruction](#basic-distinction)
 2. [Criteria for Reconstruction Datasets](#criteria-for-reconstruction-datasets)
@@ -14,7 +12,6 @@ This is a **living document**. If you know of additional datasets or have correc
    - [BRAINS – Handwritten Characters](#brains--handwritten-characters)
    - [GOD - Generic Object Decoding](#god-generic-object-decoding)
    - [NSD - Natural Scenes Dataset](#nsd-natural-scenes-dataset)
-   - [BOLD5000](#bold5000)
 4. [Video Stimulus Datasets](#video-stimulus-datasets)
    - [vim-2 – Naturalistic Video Clips](#vim-2--naturalistic-video-clips)
    - [cneuromod](#cneuromod)
@@ -111,7 +108,7 @@ Two participants viewed natural grayscale images while maintaining fixation. Ima
 | **Subjects** | 2 |
 | **Brain coverage** | 3T early visual cortex |
 | **ROIs** | V1 and V2 |
-| **Main publications** | [Schoenmakers et al., 2013 (1)](https://doi.org/10.1016/j.neuroimage.2013.07.043) [Schoenmakers et al., 2015](https://doi.org/10.3389/fncom.2014.00173) |
+| **Main publications** | [Schoenmakers et al., 2013](https://doi.org/10.1016/j.neuroimage.2013.07.043) [Schoenmakers et al., 2015](https://doi.org/10.3389/fncom.2014.00173) |
 | **Data access** | [Donders Repository dataset page](https://doi.org/10.34973/7201-s161) |
 
 **Experiment**
@@ -235,3 +232,5 @@ If you found this index useful and want to cite it, please use:
 
 Seeliger, K. (2026). Neuro-Visual Reconstruction Dataset Index.  
 Zenodo. https://doi.org/xxxx
+
+_If you know of additional datasets or have corrections, please open an issue or start a discussion._
