@@ -29,15 +29,15 @@ This is a **living document**. If you know of additional datasets or have correc
 
 ## Basics: Identification vs. Decoding vs. Reconstruction
 
-These terms are now often conflated. In foundational reconstruction and decoding literature their separation has been strict for good reasons: the tasks differ in difficulty, failure modes, and what can be concluded from and achieved with a result and method. 
+These terms are now often conflated. In foundational reconstruction and decoding literature their separation has been strict for good reasons: the tasks differ in difficulty, failure modes, what can be concluded from a result and what a method can realistically achieve. 
 
-**True reconstruction requires potential to generalise to stimuli that were not present during training.** If the correct answer is (also implicitly) selected from a predefined candidate category or image set, the wording is _decoding_ or _identification_, not reconstruction. 
+**True reconstruction requires potential to generalize to stimuli and categories that were not present during training.** If the correct answer is (also implicitly) selected from a predefined candidate category or image set, the wording is _decoding_ or _identification_, not reconstruction. 
 
 | Neuroscience term | ML framing | Search space | Difficulty |
 |---|---|---|---|
-| **Decoding** | classification | predefined label/category set | easy |
-| **Identification** | retrieval | finite candidate images | moderate |
-| **Reconstruction** | generative inverse problem | open set of possible stimuli | hard |
+| **Decoding** | classification | closed label/category set | easy |
+| **Identification** | retrieval | finite set of images | moderate |
+| **Reconstruction** | generative inverse problem | infinite, open set of perception | hard |
 
 - **Decoding (category level)**  
  Decoding refers to predicting (classifying) pre-defined labels or cognitive states from brain activity patterns. This type of classification has long been used for [neuroscientific insight](https://www.cell.com/neuron/fulltext/S0896-6273(15)00432-8). In multivariate pattern analysis (MVPA), voxel activity patterns are treated as feature vectors and classifiers are trained to distinguish experimental conditions (for example risky vs. safe decision, add vs. subtract, rule A vs. rule B).
