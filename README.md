@@ -11,19 +11,14 @@ This is a **living document**. If you know of additional datasets or have correc
 2. [Criteria for Reconstruction Datasets](#criteria-for-reconstruction-datasets)
 3. [Image Stimulus Datasets](#image-stimulus-datasets)
    - [vim-1 – Naturalistic Grayscale Images](#vim-1--naturalistic-grayscale-images)
-   - [10x10 Binary Patterns](#10x10-binary-patterns)
    - [BRAINS – Handwritten Characters](#brains--handwritten-characters)
-   - [Generic Object Decoding](#generic-object-decoding)
-   - [BOLD5000](#bold5000)
+   - [G.O.D. - Generic Object Decoding](#god-generic-object-decoding)
    - [NSD - Natural Scenes Dataset](#nsd-natural-scenes-dataset)
-   - [cneuromod-THINGS](#cneuromod-things)
-   - (...)
+   - [BOLD5000](#bold5000)
 4. [Video Stimulus Datasets](#video-stimulus-datasets)
    - [vim-2 – Naturalistic Video Clips](#vim-2--naturalistic-video-clips)
-   - [studyforrest – Forrest Gump Movie](#studyforrest--forrest-gump-movie)
    - [cneuromod](#cneuromod)
    - [Doctor Who](#doctorwho)
-   - (...)
 5. [fMRI Data and Hemodynamic Delay](#fmri-data-and-hemodynamic-delay)
 
 
@@ -105,6 +100,33 @@ Two participants viewed natural grayscale images while maintaining fixation. Ima
 - The dataset was originally used to demonstrate voxel-wise encoding models and do stimulus identification by inverting them.
 - Easy-to-use ROI masks for early visual cortex, mid/higher level regions also covered.
 - Broad semantic categories.
+
+
+### G.O.D. - Generic Object Decoding
+
+| Attribute | Details |
+|---|---|
+| **Stimulus type** | natural object images (ImageNet) |
+| **Stimuli** | 1,200 train images (150 categories), 50 test images (50 unseen categories) |
+| **Repetitions** | train: 5×, test: 35× |
+| **Subjects** | 5 |
+| **Brain coverage** | 3T whole-brain |
+| **ROIs** | visual cortex (early and higher visual areas) |
+| **Main publication** | [Horikawa & Kamitani, 2017](https://doi.org/10.1038/s41467-017-02365-8) |
+| **Data access** | https://github.com/KamitaniLab/GenericObjectDecoding |
+
+**Experiment**
+
+Participants viewed natural object images from ImageNet categories while maintaining fixation. Training stimuli covered **150 object categories**. Test stimuli consisted of **50 images from categories not present in the training set**. 
+
+**Notes**
+
+- Specifically designed for reconstruction research. 
+- Strict train–test category separation, which reduces visual and semantic overlap between training and test stimuli.
+
+**Note for reconstruction research**
+
+Because the test categories are not present during training, this dataset provides a useful benchmark for evaluating whether reconstruction models can generalize beyond the training categories.
 
 
 ### NSD - Natural Scenes Dataset
