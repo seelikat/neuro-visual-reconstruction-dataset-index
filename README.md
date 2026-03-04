@@ -1,4 +1,4 @@
-# Neuroimaging Datasets for Visual Perception Reconstruction
+# Index of Neuroimaging Datasets for Visual Perception Reconstruction
 
 This repository indexes open neuroimaging datasets for reconstructing visual perception **from human fMRI data**. 
 
