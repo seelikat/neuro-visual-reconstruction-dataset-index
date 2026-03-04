@@ -101,6 +101,31 @@ Two participants viewed natural grayscale images while maintaining fixation. Ima
 - Easy-to-use ROI masks for early visual cortex, mid/higher level regions also covered.
 - Broad semantic categories.
 
+### BRAINS – Handwritten Characters
+
+| Attribute | Details |
+|---|---|
+| **Stimulus type** | handwritten characters |
+| **Stimuli** | 288 train images, 72 test images |
+| **Repetitions** | train: 2x, test: 2x |
+| **Subjects** | 2 |
+| **Brain coverage** | 3T early visual cortex |
+| **ROIs** | V1 and V2 |
+| **Main publications** | [Schoenmakers et al., 2013 (1)](https://doi.org/10.1016/j.neuroimage.2013.07.043) [Schoenmakers et al., 2015](https://doi.org/10.3389/fncom.2014.00173) |
+| **Data access** | [Donders Repository dataset page](https://doi.org/10.34973/7201-s161) |
+
+**Experiment**
+
+Participants viewed the handwritten characters B, R, A, I, N, S while maintaining fixation. 
+
+**Notes**
+
+- Small and controlled dataset focused on early visual cortex (V1–V2). 
+
+**Note for reconstruction research**
+
+The stimulus space is MNIST-like structured and small. Reconstruction experiments focus on details in character shape. Generalization capabilities should not be expected, but it can be used to investigate new models and study fine-grained structural questions including class bias. 
+
 
 ### GOD - Generic Object Decoding
 
