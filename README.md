@@ -40,7 +40,7 @@ These terms are now often conflated. In foundational reconstruction and decoding
 | **Reconstruction** | generative inverse problem | open set of possible stimuli |
 
 - **Decoding (category level)**  
- Decoding refers to predicting (classifying) pre-defined labels or cognitive states from brain activity patterns. This type of classification has long been used for neuroscientific insight. In multivariate pattern analysis (MVPA), voxel activity patterns are treated as feature vectors and classifiers are trained to distinguish experimental conditions (for example risky vs. safe decision, add vs. subtract, face vs. house, rule A vs. rule B).
+ Decoding refers to predicting (classifying) pre-defined labels or cognitive states from brain activity patterns. This type of classification has long been used for [neuroscientific insight](https://www.cell.com/neuron/fulltext/S0896-6273(15)00432-8). In multivariate pattern analysis (MVPA), voxel activity patterns are treated as feature vectors and classifiers are trained to distinguish experimental conditions (for example risky vs. safe decision, add vs. subtract, face vs. house, rule A vs. rule B).
 
   Decoding is scientifically useful because it tests whether information about a stimulus or mental state is present in a brain region. However, it does not imply that the full visual content can be recovered. 
 
