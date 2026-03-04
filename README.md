@@ -248,7 +248,7 @@ Three participants viewed natural movie clips while maintaining fixation. Videos
 | **Brain coverage** | 3T whole-brain |
 | **ROIs** | V1–V3, FFA, MT, language localizers |
 | **Visual field coverage** | ~20° |
-| **Data paper** | [Seeliger et al., 2019](https://www.biorxiv.org/content/10.1101/687681v1.abstract) |
+| **Data paper** | [Seeliger & Sommers et al., 2019](https://www.biorxiv.org/content/10.1101/687681v1.abstract) |
 | **Data access** | [Donders Repository](https://doi.org/10.34973/j05g-fr58) |
 
 **Experiment**
