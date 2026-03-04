@@ -10,13 +10,14 @@ This guide is primarily aimed at researchers from AI and machine learning backgr
 3. [Image Stimulus Datasets](#image-stimulus-datasets)
    - [vim-1 – Naturalistic Grayscale Images](#vim-1--naturalistic-grayscale-images)
    - [BRAINS – Handwritten Characters](#brains--handwritten-characters)
+   - [Miyawaki Dataset](#miyawaki-dataset)
    - [BOLD5000](#bold5000)
    - [GOD - Generic Object Decoding](#god-generic-object-decoding)
    - [NSD - Natural Scenes Dataset](#nsd-natural-scenes-dataset)
 4. [Video Stimulus Datasets](#video-stimulus-datasets)
    - [vim-2 – Naturalistic Video Clips](#vim-2--naturalistic-video-clips)
    - [cneuromod](#cneuromod)
-   - [Doctor Who](#doctorwho)
+   - [Doctor Who Dataset](#doctor-who-dataset)
    - [fMRI Data and Hemodynamic Delay](#fmri-data-and-hemodynamic-delay)
 
 
@@ -89,7 +90,7 @@ Here are suggested criteria to take into account when evaluating whether to use 
 |---|---|
 | **Stimulus type** | naturalistic grayscale images |
 | **Stimuli** | 1750 training images, 120 test images |
-| **Repetitions** | train: 2x, test: 13x |
+| **Repetitions** | train: 2×, test: 13× |
 | **Subjects** | 2 |
 | **Visual coverage** | circularly masked images |
 | **Brain regions** | visual cortex V1-V4, LatOcc, extrastriate (unspecified) regions |
@@ -108,11 +109,13 @@ Two participants viewed natural grayscale images while maintaining fixation. Ima
 
 ### BRAINS – Handwritten Characters
 
+![BRAINS samples](brains_samples.png)
+
 | Attribute | Details |
 |---|---|
 | **Stimulus type** | handwritten characters |
 | **Stimuli** | 288 train images, 72 test images |
-| **Repetitions** | train: 2x, test: 2x |
+| **Repetitions** | train: 2×, test: 2× |
 | **Subjects** | 2 |
 | **Brain coverage** | 3T early visual cortex |
 | **ROIs** | V1 and V2 |
@@ -130,6 +133,29 @@ Participants viewed the handwritten characters B, R, A, I, N, S while maintainin
 **Note for reconstruction research**
 
 The stimulus space is MNIST-like structured and small. Reconstruction experiments focus on details in character shape. Generalization capabilities should not be expected, but it can be used to investigate new models and study fine-grained structural questions including class bias. 
+
+
+### Miyawaki Dataset
+
+![Miyawaki samples](miyawaki_samples.png)
+
+| Attribute | Details |
+|---|---|
+| **Stimulus type** | 10×10 pixel patterns |
+| **Stimuli** | train: 440 random patterns; test: geometric shapes / letters |
+| **Repetitions** | train: 1×; test: 13× |
+| **Subjects** | 2 |
+| **Brain coverage** | 3T partial visual system |
+| **ROIs** | V1, V2 |
+| **Visual field coverage** | ~12° |
+| **Main publication** | [Miyawaki et al., 2008](https://doi.org/10.1016/j.neuron.2008.11.004) |
+| **Data access** | [brainliner data page](http://brainliner.jp/data/brainliner/Visual_Image_Reconstruction) |
+
+**Experiment**  
+Participants viewed binary 10×10 pixel patterns while maintaining fixation. Training patterns were random, test were letters and geometric shapes (see examples). 
+
+**Note for reconstruction research**  
+One of the first demonstrations of explicit visual _reconstruction_ from human fMRI. Reconstruction is performed by predicting the contrast value of each pixel location separately. Although the stimuli are simple, this pixel-wise reconstruction is still conceptually important for reconstruction projects. 
 
 ### BOLD5000
 
@@ -237,7 +263,7 @@ Three participants viewed natural movie clips while maintaining fixation. Videos
 - Similar high quality and easy to use as vim-1.
 - Some train–test overlap has been reported, see [Shirakawa et al., 2025](https://www.sciencedirect.com/science/article/pii/S0893608025003946).
 
-### Doctor Who – Naturalistic Video
+### Doctor Who Dataset
 
 | Attribute | Details |
 |---|---|
