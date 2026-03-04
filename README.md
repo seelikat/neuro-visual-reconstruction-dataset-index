@@ -17,7 +17,7 @@ This guide is primarily aimed at researchers from AI and machine learning backgr
    - [vim-2 – Naturalistic Video Clips](#vim-2--naturalistic-video-clips)
    - [cneuromod](#cneuromod)
    - [Doctor Who](#doctorwho)
-5. [fMRI Data and Hemodynamic Delay](#fmri-data-and-hemodynamic-delay)
+   - [fMRI Data and Hemodynamic Delay](#fmri-data-and-hemodynamic-delay)
 
 
 ## Basics: Identification vs. Decoding vs. Reconstruction
@@ -62,8 +62,17 @@ Here are suggested criteria to take into account when evaluating whether to use 
 - **Stimulus diversity**  
   Reconstruction models must generalize beyond the training set. Datasets with limited semantic diversity restrict the feature space that models can learn. If your test set is truly independent (see first point), this limitation will typically become visible in reconstruction quality.
 
+- **Visual field coverage**  
+  Visual field coverage determines how much of the visual cortex map is stimulated. Larger stimuli (=higher visual field coverage) that cover more of the visual field activate a larger portion. For reconstruction research this matters greatly. When stimuli cover more of the visual field, voxels carry more fine-grained visual information, particularly in early visual cortex. Datasets with larger visual field coverage are therefore generally preferred for reconstruction.
+
+- **Fixation**  
+  Most visual neuroimaging experiments require participants to **fixate on a point in the center of the screen** during stimulus presentation. This is important because large parts of the visual system are retinotopically organized (a distorted retina-reflecting map). If participants freely move their eyes, the same image stimulates different parts of this cortical map. Eye movements can introduce strong confounds: models may end up decoding eye position on the cortical map and not stimulus-related cortical patterns. There is debate about the strict necessity of fixation though. It also reduces natural viewing behavior and may suppress activity in higher-level visual areas. In general, reconstruction on free-viewing datasets should be approached with caution.
+
 - **Repetitions and signal-to-noise ratio (SNR)**  
   fMRI signals are noisy. Many reconstruction-oriented datasets therefore include many repeated presentations of the test stimuli (_resampling_). Averaging across repetitions improves signal quality (SNR) and makes voxel-level patterns more reliable. Single-shot reconstruction is rarely seen outside invasive (implant) recording contexts and even there often produces substantially lower quality than reconstructions from resampled stimuli. If your pipeline is strong enough, however, it is worth trying.
+
+- **Number of subjects**  
+  Fine-grained functional organization varies substantially across individuals. For this reason, many reconstruction projects prefer datasets with many images shown to few healthy individuals ([deep sampling](https://doi.org/10.1016/j.cobeha.2020.12.008)) rather than those with few images for many subjects. There are efforts to learn across-individuals.
 
 - **Copyright and availability of stimulus files**  
   Reconstruction requires access to the original images or videos. Datasets where stimulus material cannot be redistributed (for example due to copyright restrictions) can be difficult to use in practice. Journals have occasionally required researchers to redraw copyrighted original stimuli by hand, or only show CC0/public domain images, which is not ideal for presenting reconstruction results.
@@ -71,14 +80,6 @@ Here are suggested criteria to take into account when evaluating whether to use 
 - **Smoothing in preprocessing**  
   Check the preprocessing description of the dataset. One standard preprocessing step from cognitive neuroscience is heavy spatial smoothing, i.e. essentially applying a Gaussian filter across the voxel matrix. This degrades the fine-grained spatial information that ML-based pattern analysis requires. For reconstruction projects it is particularly important that such voxel-level activity patterns remain intact. Note that as an ML researcher you may not easily be able to modify the extensive preprocessing and GLM pipeline yourself without assistance from someone with fMRI expertise, in order to exclude this step.
 
-- **Fixation**  
-  Most visual neuroimaging experiments require participants to **fixate on a point in the center of the screen** during stimulus presentation. This is important because large parts of the visual system are retinotopically organized (a distorted retina-reflecting map). If participants freely move their eyes, the same image stimulates different parts of this cortical map. Eye movements can introduce strong confounds: models may end up decoding eye position on the cortical map and not stimulus-related cortical patterns. There is debate about the strict necessity of fixation though. It also reduces natural viewing behavior and may suppress activity in higher-level visual areas. In general, reconstruction on free-viewing datasets should be approached with caution.
-
-- **Number of subjects**  
-  Fine-grained functional organization varies substantially across individuals. For this reason, many reconstruction projects prefer datasets with many images shown to few healthy individuals ([deep sampling](https://doi.org/10.1016/j.cobeha.2020.12.008)) rather than those with few images for many subjects. There are efforts to learn across-individuals.
-
-- **Visual field coverage**  
-  Visual field coverage determines how much of the visual cortex map is stimulated. Larger stimuli (=higher visual field coverage) that cover more of the visual field activate a larger portion. For reconstruction research this matters greatly. When stimuli cover more of the visual field, voxels carry more fine-grained visual information, particularly in early visual cortex. Datasets with larger visual field coverage are therefore generally preferred for reconstruction.
 
 ## Image Stimulus Datasets
 
@@ -235,6 +236,30 @@ Three participants viewed natural movie clips while maintaining fixation. Videos
 - The dataset was originally used to demonstrate encoding models with motion energy features. Reconstruction was done to demonstrate the power of these features to represent brain activity. 
 - Similar high quality and easy to use as vim-1.
 - Some train–test overlap has been reported, see [Shirakawa et al., 2025](https://www.sciencedirect.com/science/article/pii/S0893608025003946).
+
+### Doctor Who – Naturalistic Video
+
+| Attribute | Details |
+|---|---|
+| **Stimulus type** | naturalistic video (TV series episodes) |
+| **Stimuli** | ~23 hours (~120,000 fMRI images) of continuous video (30 episodes) |
+| **Repetitions** | train: 1×, test: 22–26× |
+| **Subjects** | 1 |
+| **Brain coverage** | 3T whole-brain |
+| **ROIs** | V1–V3, FFA, MT, language localizers |
+| **Visual field coverage** | ~20° |
+| **Data paper** | [Seeliger et al., 2019](https://www.biorxiv.org/content/10.1101/687681v1.abstract) |
+| **Data access** | [Donders Repository](https://doi.org/10.34973/j05g-fr58) |
+
+**Experiment**
+
+A densely sampled single-participant fMRI dataset recorded during viewing of BBC *Doctor Who* episodes. The experiment produced ~120,000 training volumes from full episodes and a separate test set of short narrative clips  (different Doctor incarnation) repeated ~22–26 times. The participant maintained fixation throughout the recording. 
+
+**Notes**
+- Deep single-brain dataset designed for end-to-end learning on neuroimaging data. 
+- The stimuli are copyrighted and need to be constructed from the original Blu-ray discs.
+- Example reconstruction work: [Le et al., 2022 (Brain2Pix)](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2022.940972/full)
+
 
 ## fMRI Data and Hemodynamic Delay
 
