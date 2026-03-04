@@ -131,7 +131,7 @@ Participants viewed the handwritten characters B, R, A, I, N, S while maintainin
 
 The stimulus space is MNIST-like structured and small. Reconstruction experiments focus on details in character shape. Generalization capabilities should not be expected, but it can be used to investigate new models and study fine-grained structural questions including class bias. 
 
-### BOLD5000 – Large Natural Image Dataset
+### BOLD5000
 
 | Attribute | Details |
 |---|---|
@@ -261,7 +261,7 @@ A densely sampled single-participant fMRI dataset recorded during viewing of BBC
 - Example reconstruction work: [Le et al., 2022 (Brain2Pix)](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2022.940972/full)
 
 
-## fMRI Data and Hemodynamic Delay
+### fMRI Data and Hemodynamic Delay
 
 ![Canonical Hemodynamic Response Function](hrf.png)
 
