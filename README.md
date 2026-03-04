@@ -161,6 +161,8 @@ One of the first demonstrations of explicit visual _reconstruction_ from human f
 
 ### BOLD5000
 
+![BOLD5000 samples](bold5000_samples.png)
+
 | Attribute | Details |
 |---|---|
 | **Stimulus type** | naturalistic images (SUN, COCO, ImageNet) |
@@ -184,7 +186,7 @@ Participants viewed natural images drawn from three common computer vision datas
 
 ### GOD - Generic Object Decoding
 
-![Generic Object Decoding](horikawa_samples.png)
+![Generic Object Decoding samples](horikawa_samples.png)
 
 | Attribute | Details |
 |---|---|
