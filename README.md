@@ -8,17 +8,18 @@ This guide is primarily aimed at researchers from AI and machine learning backgr
 1. [Basics: Identification vs. Decoding vs. Reconstruction](#basic-distinction)
 2. [Criteria for Reconstruction Datasets](#criteria-for-reconstruction-datasets)
 3. [Image Stimulus Datasets](#image-stimulus-datasets)
-   - [vim-1 – Naturalistic Grayscale Images](#vim-1)
-   - [BRAINS – Handwritten Characters](#brains)
+   - [vim-1](#vim-1)
+   - [BRAINS](#brains)
    - [Miyawaki Dataset](#miyawaki-dataset)
    - [BOLD5000](#bold5000)
    - [GOD - Generic Object Decoding](#god-generic-object-decoding)
    - [NSD - Natural Scenes Dataset](#nsd-natural-scenes-dataset)
-   - [cneuromod-THINGS](#cneuromod--things)
+   - [THINGS-fMRI](#things--fmri)
+   - [cNeuromod-THINGS](#cneuromod-things)
 4. [Video Stimulus Datasets](#video-stimulus-datasets)
    - [vim-2 – Naturalistic Video Clips](#vim-2)
-   - [cneuromod](#cneuromod)
    - [Doctor Who Dataset](#doctor-who-dataset)
+   - [cNeuromod Video](#cneuromod-video)
    - [fMRI Data and Hemodynamic Delay](#fmri-data-and-hemodynamic-delay)
 
 
@@ -83,8 +84,7 @@ Here are suggested criteria to take into account when evaluating whether to use 
   Reconstruction requires access to the original images or videos. Datasets where stimulus material cannot be redistributed (for example due to copyright restrictions) can be difficult to use in practice. Journals have occasionally required researchers to redraw copyrighted original stimuli by hand, or only show CC0/public domain images, which is not ideal for presenting reconstruction results.
 
 - **Smoothing in preprocessing**  
-  Datasets aimed at fine-grained visual perception tend to avoid this step, but double-check the preprocessing description of the dataset. One standard preprocessing step from cognitive neuroscience is spatial smoothing, i.e. essentially applying a Gaussian filter across the voxel matrix. This degrades the fine-grained spatial information that ML-based pattern analysis requires. For reconstruction projects it is particularly important that such voxel-level activity patterns remain intact. Note that as an ML researcher you may not easily be able to modify the extensive preprocessing and GLM pipeline yourself without assistance from someone with fMRI expertise, in order to exclude this step.
-
+  Modern vision datasets tend to avoid this step, but do double-check whether spatial smoothing was applied. This standard fMRI step applies a Gaussian filter across voxels and effectively **blurs your signal**. For reconstruction (and other pattern-based analyses), this can destroy fine-grained spatial information. Note that as an ML researcher you may not easily be able to modify the extensive preprocessing and GLM pipeline yourself without assistance from someone with fMRI expertise, in order to exclude this step.
 
 ## Image Stimulus Datasets
 
@@ -99,7 +99,7 @@ Here are suggested criteria to take into account when evaluating whether to use 
 | **Fixation** | yes |
 | **Repetitions** | train: 2×, test: 13× |
 | **Subjects** | 2 |
-| **Visual coverage** | circularly masked images |
+| **Visual field coverage** | 20° |
 | **Brain regions** | visual cortex V1-V4, LatOcc, extrastriate (unspecified) regions |
 | **Voxel size** | 2.0 mm³ isotropic |
 | **Main publication** | [Kay et al., 2008](https://doi.org/10.1038/nature06713) |
@@ -123,14 +123,14 @@ Two participants viewed natural grayscale images while maintaining fixation. Ima
 |---|---|
 | **Stimulus type** | handwritten characters |
 | **Stimuli** | 288 train images, 72 test images 
-| **Fixation** | yes ||
+| **Fixation** | yes |
 | **Repetitions** | train: 2×, test: 2× |
 | **Subjects** | 2 |
 | **Brain coverage** | 3T early visual cortex |
 | **Voxel size** | 2.0 mm³ isotropic |
 | **Visual field coverage** | ~9° |
 | **ROIs** | V1 and V2 |
-| **Main publications** | [Schoenmakers et al., 2013](https://doi.org/10.1016/j.neuroimage.2013.07.043) [Schoenmakers et al., 2015](https://doi.org/10.3389/fncom.2014.00173) |
+| **Main publications** | [Schoenmakers et al., 2013](https://doi.org/10.1016/j.neuroimage.2013.07.043), [Schoenmakers et al., 2015](https://doi.org/10.3389/fncom.2014.00173) |
 | **Data access** | [Donders Repository dataset page](https://doi.org/10.34973/7201-s161) |
 
 **Experiment**
@@ -383,7 +383,6 @@ A densely sampled single-participant fMRI dataset recorded during viewing of BBC
 | **Voxel size** | ~2mm isotropic |
 | **TR** | 1.49s |
 | **Visual field coverage** | ~10° |
-| **Visual field coverage** | large projected screen (natural viewing) |
 | **Fixation** | no fixation |
 | **Data access** | https://www.cneuromod.ca/ |
 
