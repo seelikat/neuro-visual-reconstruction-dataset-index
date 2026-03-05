@@ -272,7 +272,7 @@ The standard train/test split contains strong semantic clustering and substantia
 | **Repetitions** | train 1×, test 12× |
 | **Subjects** | 3 |
 | **Brain coverage** | 3T whole-brain |
-| **ROIs** | early visual cortex and category-selective regions (FFA, PPA, LOC, etc.) |
+| **ROIs** | early and higher visual cortex (FFA, PPA, LOC, etc.) |
 | **Visual field coverage** | ~10° |
 | **Voxel size** | 2.0 mm³ isotropic |
 | **Main publication** | [Hebart et al., 2023](https://doi.org/10.7554/eLife.82580) |
@@ -284,8 +284,7 @@ Participants viewed natural object images drawn from the THINGS object database 
 
 **Notes**
 
-- Large and systematically sampled object image set designed to study object representations across cortex.
-- Includes extensive **functional localizers and retinotopy**, enabling ROI-based analyses. 
+- Large and systematically sampled object image set designed to study object representations across cortex. 
 
 
 ### cNeuromod-THINGS
