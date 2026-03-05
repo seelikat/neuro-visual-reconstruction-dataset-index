@@ -8,14 +8,15 @@ This guide is primarily aimed at researchers from AI and machine learning backgr
 1. [Basics: Identification vs. Decoding vs. Reconstruction](#basic-distinction)
 2. [Criteria for Reconstruction Datasets](#criteria-for-reconstruction-datasets)
 3. [Image Stimulus Datasets](#image-stimulus-datasets)
-   - [vim-1 – Naturalistic Grayscale Images](#vim-1--naturalistic-grayscale-images)
-   - [BRAINS – Handwritten Characters](#brains--handwritten-characters)
+   - [vim-1 – Naturalistic Grayscale Images](#vim-1)
+   - [BRAINS – Handwritten Characters](#brains)
    - [Miyawaki Dataset](#miyawaki-dataset)
    - [BOLD5000](#bold5000)
    - [GOD - Generic Object Decoding](#god-generic-object-decoding)
    - [NSD - Natural Scenes Dataset](#nsd-natural-scenes-dataset)
+   - [cneuromod-THINGS](#cneuromod--things)
 4. [Video Stimulus Datasets](#video-stimulus-datasets)
-   - [vim-2 – Naturalistic Video Clips](#vim-2--naturalistic-video-clips)
+   - [vim-2 – Naturalistic Video Clips](#vim-2)
    - [cneuromod](#cneuromod)
    - [Doctor Who Dataset](#doctor-who-dataset)
    - [fMRI Data and Hemodynamic Delay](#fmri-data-and-hemodynamic-delay)
@@ -84,7 +85,7 @@ Here are suggested criteria to take into account when evaluating whether to use 
 
 ## Image Stimulus Datasets
 
-### vim-1 - Naturalistic Grayscale Images
+### vim-1
 
 ![vim-1 samples](vim1_samples.png)
 
@@ -109,7 +110,7 @@ Two participants viewed natural grayscale images while maintaining fixation. Ima
 - Easy-to-use ROI masks for early visual cortex, mid/higher level regions also covered.
 - Broad semantic categories.
 
-### BRAINS – Handwritten Characters
+### BRAINS
 
 ![BRAINS samples](brains_samples.png)
 
@@ -243,9 +244,34 @@ Participants viewed natural images from the **MS COCO dataset** during long-term
 The dataset was _not originally designed for reconstruction experiments_. The standard train/test split contains strong semantic clustering and substantial similarity between training and test images within the same MS COCO categories. This can inflate apparent reconstruction performance (see [Shirakawa et al., 2025](https://www.sciencedirect.com/science/article/pii/S0893608025003946)). For reconstruction studies it is advisable to create alternative splits where test stimuli contain categories not present during training, or where semantic and visual overlap between training and test images is minimized.
 
 
+### cNeuromod-THINGS
+
+| Attribute | Details |
+|---|---|
+| **Stimulus type** | natural object images (THINGS database) |
+| **Stimuli** | ~4,320 images (720 categories, 6 images/category) |
+| **Repetitions** | ~3× per image |
+| **Subjects** | 4 |
+| **Brain coverage** | 3T whole-brain |
+| **Voxel size** | ~2 mm isotropic |
+| **Visual field coverage** | ~10° |
+| **Main publication** | [St-Laurent et al., 2026](https://doi.org/10.1038/s41597-026-06591-y) |
+| **Data access** | [Zenodo data page](https://zenodo.org/records/17881592) |
+
+**Experiment**
+
+Participants viewed object images from the THINGS object database while maintaining central fixation. 
+
+**Notes**  
+- Part of the [CNeuroMod deep-phenotyping project](https://www.cneuromod.ca), where a small number of participants are scanned extensively across tasks like video watching, narratives, video games, and other tasks.
+
+**Note for reconstruction research**  
+Because the dataset uses the same participants as the cNeuromod project, models can potentially be trained on all its visual data. Note that cNeuromod-THINGS uses central fixation, while several other cNeuromod recordings use natural viewing (see criteria).
+
+
 ## Video Stimulus Datasets
 
-### vim-2 – Naturalistic Video Clips
+### vim-2
 
 | Attribute | Details |
 |---|---|
