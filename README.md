@@ -237,7 +237,7 @@ Because the test categories are not present during training, this dataset provid
 | **Stimuli** | ~73,000 unique images total |
 | **Fixation** | yes |
 | **Images per subject** | ~10,000 unique images |
-| **Repetitions** | 3x both train/test |
+| **Repetitions** | 3× both train/test |
 | **Subjects** | 8 |
 | **Scanner** | 7T fMRI (high-res) |
 | **Brain coverage** | whole brain |
@@ -323,7 +323,7 @@ Because the dataset uses the same participants as the cNeuromod project, models 
 | **Stimulus type** | naturalistic videos (movie clips) |
 | **Stimuli** | ~7200 training timepoints, 540 test timepoints |
 | **Fixation** | yes |
-| **Repetitions** | train: 1x, test: 10x |
+| **Repetitions** | train: 1×, test: 10× |
 | **Subjects** | 3 |
 | **TR** | 1s |
 | **Visual field coverage** | 20° |
@@ -419,6 +419,8 @@ For video datasets the situation is more complicated, because the stimulus is co
 
 If you found this index useful and want to cite it, please use:
 
-K. Seeliger (2026). Neuro-Visual Reconstruction Dataset Index (v1.0). Zenodo. [https://doi.org/10.5281/zenodo.18876186](https://doi.org/10.5281/zenodo.18876186)
+K. Seeliger (2026). Neuro-Visual Reconstruction Dataset Index (v1.0). Zenodo. [https://doi.org/10.5281/zenodo.18876186](https://doi.org/10.5281/zenodo.18876186)  
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18876186.svg)](https://doi.org/10.5281/zenodo.18876186)
 
 _If you know of additional datasets or have corrections, please open an issue or start a discussion._
