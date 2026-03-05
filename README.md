@@ -67,6 +67,9 @@ Here are suggested criteria to take into account when evaluating whether to use 
 - **Visual field coverage**  
   Visual field coverage determines how much of the visual cortex map is stimulated. Larger stimuli (=higher visual field coverage) that cover more of the visual field activate a larger portion. For reconstruction research this matters greatly. When stimuli cover more of the visual field, voxels carry more fine-grained visual information, particularly in early visual cortex. Datasets with larger visual field coverage are therefore generally preferred for reconstruction.
 
+- **Voxel size**  
+  Essentially the pixel resolution of the recordings. Stronger scanner magnetic fields (e.g. 7T) will allow for smaller voxels. 
+
 - **Fixation**  
   Most visual neuroimaging experiments require participants to **fixate on a point in the center of the screen** during stimulus presentation. This is important because large parts of the visual system are retinotopically organized (a distorted retina-reflecting map). If participants freely move their eyes, the same image stimulates different parts of this cortical map. Eye movements can introduce strong confounds: models may end up decoding eye position on the cortical map and not stimulus-related cortical patterns. There is debate about the strict necessity of fixation though. It also reduces natural viewing behavior and may suppress activity in higher-level visual areas. In general, reconstruction on free-viewing datasets should be approached with caution.
 
@@ -93,6 +96,7 @@ Here are suggested criteria to take into account when evaluating whether to use 
 |---|---|
 | **Stimulus type** | naturalistic grayscale images |
 | **Stimuli** | 1750 training images, 120 test images |
+| **Fixation** | yes |
 | **Repetitions** | train: 2×, test: 13× |
 | **Subjects** | 2 |
 | **Visual coverage** | circularly masked images |
@@ -117,7 +121,8 @@ Two participants viewed natural grayscale images while maintaining fixation. Ima
 | Attribute | Details |
 |---|---|
 | **Stimulus type** | handwritten characters |
-| **Stimuli** | 288 train images, 72 test images |
+| **Stimuli** | 288 train images, 72 test images 
+| **Fixation** | yes ||
 | **Repetitions** | train: 2×, test: 2× |
 | **Subjects** | 2 |
 | **Brain coverage** | 3T early visual cortex |
@@ -146,6 +151,7 @@ The stimulus space is MNIST-like structured and small. Reconstruction experiment
 |---|---|
 | **Stimulus type** | 10×10 pixel patterns |
 | **Stimuli** | train: 440 random patterns; test: geometric shapes / letters |
+| **Fixation** | yes |
 | **Repetitions** | train: 1×; test: 13× |
 | **Subjects** | 2 |
 | **Brain coverage** | 3T partial visual system |
@@ -168,6 +174,7 @@ One of the first demonstrations of explicit visual _reconstruction_ from human f
 |---|---|
 | **Stimulus type** | naturalistic images (SUN, COCO, ImageNet) |
 | **Stimuli** | ~5200 images |
+| **Fixation** | yes |
 | **Repetitions** | most 1×, subset of 113 3×+ |
 | **Subjects** | 4 |
 | **Brain coverage** | 3T whole-brain |
@@ -193,6 +200,7 @@ Participants viewed natural images drawn from three common computer vision datas
 |---|---|
 | **Stimulus type** | natural object images (ImageNet) |
 | **Stimuli** | 1,200 train images (150 categories), 50 test images (50 unseen categories) |
+| **Fixation** | yes |
 | **Repetitions** | train: 5×, test: 35× |
 | **Subjects** | 5 |
 | **Brain coverage** | 3T whole-brain |
@@ -220,6 +228,7 @@ Because the test categories are not present during training, this dataset provid
 |---|---|
 | **Stimulus type** | natural color images (MS COCO) |
 | **Stimuli** | ~73,000 unique images total |
+| **Fixation** | yes |
 | **Images per subject** | ~10,000 unique images |
 | **Repetitions** | 3x both train/test |
 | **Subjects** | 8 |
@@ -250,10 +259,11 @@ The dataset was _not originally designed for reconstruction experiments_. The st
 |---|---|
 | **Stimulus type** | natural object images (THINGS database) |
 | **Stimuli** | ~4,320 images (720 categories, 6 images/category) |
+| **Fixation** | yes |
 | **Repetitions** | ~3× per image |
 | **Subjects** | 4 |
 | **Brain coverage** | 3T whole-brain |
-| **Voxel size** | ~2 mm isotropic |
+| **Voxel size** | ~2mm³ isotropic |
 | **Visual field coverage** | ~10° |
 | **Main publication** | [St-Laurent et al., 2026](https://doi.org/10.1038/s41597-026-06591-y) |
 | **Data access** | [Zenodo data page](https://zenodo.org/records/17881592) |
@@ -277,15 +287,19 @@ Because the dataset uses the same participants as the cNeuromod project, models 
 |---|---|
 | **Stimulus type** | naturalistic videos (movie clips) |
 | **Stimuli** | ~7200 training timepoints, 540 test timepoints |
+| **Fixation** | yes |
 | **Repetitions** | train: 1x, test: 10x |
 | **Subjects** | 3 |
+| **TR** | 1s |
+| **Visual field coverage** | 20° |
+| **Voxel size** | 2.0×2.0×2.5 mm³ |
 | **Brain regions** | visual cortex |
 | **Main publication** | [Nishimoto et al., 2011](https://doi.org/10.1016/j.cub.2011.08.031) |
 | **Data access** | [CRCNS dataset page](https://crcns.org/data-sets/vc/vim-2) |
 
 **Experiment**
 
-Three participants viewed natural movie clips while maintaining fixation. Videos were presented in grayscale and slowed to half speed to better match the hemodynamic delay of the BOLD signal.
+Three participants viewed natural movie trailers at half speed while maintaining fixation. Videos were presented in grayscale and slowed to half speed to better match the hemodynamic delay of the BOLD signal.
 
 **Notes**
 
@@ -301,10 +315,12 @@ Three participants viewed natural movie clips while maintaining fixation. Videos
 |---|---|
 | **Stimulus type** | naturalistic video (TV series episodes) |
 | **Stimuli** | ~23 hours (~120,000 fMRI images) of continuous video (30 episodes) |
+| **Fixation** | yes |
 | **Repetitions** | train: 1×, test: 22–26× |
 | **Subjects** | 1 |
 | **Brain coverage** | 3T whole-brain |
 | **ROIs** | V1–V3, FFA, MT, language localizers |
+| **TR** | 700ms |
 | **Visual field coverage** | ~20° |
 | **Data paper** | [Seeliger & Sommers et al., 2019](https://www.biorxiv.org/content/10.1101/687681v1.abstract) |
 | **Data access** | [Donders Repository](https://doi.org/10.34973/j05g-fr58) |
@@ -316,7 +332,35 @@ A densely sampled single-participant fMRI dataset recorded during viewing of BBC
 **Notes**
 - Deep single-brain dataset designed for end-to-end learning on neuroimaging data. 
 - The stimuli are copyrighted and need to be constructed from the original Blu-ray discs.
-- Example reconstruction work: [Le et al., 2022 (Brain2Pix)](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2022.940972/full)
+- Example recons
+- truction work: [Le et al., 2022 (Brain2Pix)](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2022.940972/full)
+
+### CNeuroMod video
+
+| Attribute | Details |
+|---|---|
+| **Stimulus type** | naturalistic videos (movies, TV series) |
+| **Stimuli** | 7 seasons of friends, 10 movies |
+| **Fixation** | no |
+| **Repetitions** | 1× |
+| **Subjects** | 6 |
+| **Brain coverage** | 3T whole-brain |
+| **Voxel size** | ~2mm isotropic |
+| **TR** | 1.49s |
+| **Visual field coverage** | ~10° |
+| **Visual field coverage** | large projected screen (natural viewing) |
+| **Fixation** | no fixation |
+| **Data access** | https://www.cneuromod.ca/ |
+
+**Experiment**
+
+The **Courtois NeuroMod project** is a long-term deep-sampling dataset where 6 participants were scanned extensively across many cognitive tasks over multiple years. Each subject contributed **~200 hours of fMRI recordings** across movie watching, language, memory, images and videogame tasks. It is the current largest dense single-brain fMRI dataset, designed to support neuroAI research across multiple cognitive domains.
+
+**Note for reconstruction research**
+
+Vision-related datasets include very high amounts of naturalistic video. 
+
+The naturalistic video datasets in cneuromod do not enforce fixation and allow free viewing (see criteria). Reconstruction experiments using these datasets should consider and account for potential eye movement influences. 
 
 
 ### fMRI Data and Hemodynamic Delay
@@ -325,7 +369,7 @@ A densely sampled single-participant fMRI dataset recorded during viewing of BBC
 
 fMRI records blood-oxygenation changes (the BOLD signal) following neural activity. fMRI data is organized as voxel-wise activity measurements in a 3D volume (voxels are 3D pixels), which – unlike many other neuroimaging modalities – makes it straightforward to use with standard machine learning methods.
 
-Among non-invasive neuroimaging modalities, fMRI offers the best spatial resolution, which enables detailed localization of brain activity. Unlike invasive recording methods, it can also cover the whole visual system and the whole brain and can easily be recorded in healthy humans.
+Among non-invasive neuroimaging modalities, fMRI offers the best spatial resolution, which enables detailed localization of brain activity. Unlike invasive recording methods, it can also cover the whole visual system and the whole brain and can easily be recorded in healthy humans. fMRI is slow however, the _sampling rate_ (TR) usually being in the range of seconds, which impacts continuous stimuli such as video. 
 
 The BOLD response typically peaks ~4–6 seconds after neural firing and returns to baseline after ~10–12 seconds. This means that the fMRI signal at time t reflects neural activity from several seconds earlier, i.e.: from the stimulus presented several seconds earlier. The image shows the canonical hemodynamic response function (HRF) presented in neuroscience literature and implemented in many frameworks. In practice, the exact shape and timing vary across voxels depending on vascularization and other physiological factors.
 
