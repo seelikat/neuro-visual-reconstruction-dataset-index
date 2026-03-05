@@ -83,7 +83,7 @@ Here are suggested criteria to take into account when evaluating whether to use 
   Reconstruction requires access to the original images or videos. Datasets where stimulus material cannot be redistributed (for example due to copyright restrictions) can be difficult to use in practice. Journals have occasionally required researchers to redraw copyrighted original stimuli by hand, or only show CC0/public domain images, which is not ideal for presenting reconstruction results.
 
 - **Smoothing in preprocessing**  
-  Check the preprocessing description of the dataset. One standard preprocessing step from cognitive neuroscience is heavy spatial smoothing, i.e. essentially applying a Gaussian filter across the voxel matrix. This degrades the fine-grained spatial information that ML-based pattern analysis requires. For reconstruction projects it is particularly important that such voxel-level activity patterns remain intact. Note that as an ML researcher you may not easily be able to modify the extensive preprocessing and GLM pipeline yourself without assistance from someone with fMRI expertise, in order to exclude this step.
+  Datasets aimed at fine-grained visual perception tend to avoid this step, but double-check the preprocessing description of the dataset. One standard preprocessing step from cognitive neuroscience is spatial smoothing, i.e. essentially applying a Gaussian filter across the voxel matrix. This degrades the fine-grained spatial information that ML-based pattern analysis requires. For reconstruction projects it is particularly important that such voxel-level activity patterns remain intact. Note that as an ML researcher you may not easily be able to modify the extensive preprocessing and GLM pipeline yourself without assistance from someone with fMRI expertise, in order to exclude this step.
 
 
 ## Image Stimulus Datasets
@@ -128,6 +128,7 @@ Two participants viewed natural grayscale images while maintaining fixation. Ima
 | **Subjects** | 2 |
 | **Brain coverage** | 3T early visual cortex |
 | **Voxel size** | 2.0 mm³ isotropic |
+| **Visual field coverage** | ~9° |
 | **ROIs** | V1 and V2 |
 | **Main publications** | [Schoenmakers et al., 2013](https://doi.org/10.1016/j.neuroimage.2013.07.043) [Schoenmakers et al., 2015](https://doi.org/10.3389/fncom.2014.00173) |
 | **Data access** | [Donders Repository dataset page](https://doi.org/10.34973/7201-s161) |
@@ -209,6 +210,7 @@ Participants viewed natural images drawn from three common computer vision datas
 | **Subjects** | 5 |
 | **Brain coverage** | 3T whole-brain |
 | **Voxel size** | 3.0 mm³ isotropic |
+| **Visual field coverage** | 12° |
 | **ROIs** | visual cortex (early and higher visual areas) |
 | **Main publication** | [Horikawa & Kamitani, 2017](https://doi.org/10.1038/ncomms15037) |
 | **Data access** | https://github.com/KamitaniLab/GenericObjectDecoding |
@@ -239,6 +241,7 @@ Because the test categories are not present during training, this dataset provid
 | **Subjects** | 8 |
 | **Scanner** | 7T fMRI (high-res) |
 | **Brain coverage** | whole brain |
+| **Visual field coverage** | 8.4° |
 | **Voxel size** | 1.8 mm³ isotropic |
 | **Main publication** | [Allen et al., 2022](https://doi.org/10.1038/s41593-021-00962-x) |
 | **Data access** | https://naturalscenesdataset.org |
@@ -257,6 +260,32 @@ Participants viewed natural images from the **MS COCO dataset** during long-term
 **Note for reconstruction research**
 
 The dataset was _not originally designed for reconstruction experiments_. The standard train/test split contains strong semantic clustering and substantial similarity between training and test images within the same MS COCO categories. This can inflate apparent reconstruction performance (see [Shirakawa et al., 2025](https://www.sciencedirect.com/science/article/pii/S0893608025003946)). For reconstruction studies it is advisable to create alternative splits where test stimuli contain categories not present during training, or where semantic and visual overlap between training and test images is minimized.
+
+
+### THINGS-fMRI
+
+| Attribute | Details |
+|---|---|
+| **Stimulus type** | naturalistic object images (THINGS database) |
+| **Stimuli** | 8,640 unique images (720 categories, 12 images/category) |
+| **Fixation** | yes |
+| **Repetitions** | train 1×, test 12× |
+| **Subjects** | 3 |
+| **Brain coverage** | 3T whole-brain |
+| **ROIs** | early visual cortex and category-selective regions (FFA, PPA, LOC, etc.) |
+| **Visual field coverage** | ~10° |
+| **Voxel size** | 2.0 mm³ isotropic |
+| **Main publication** | [Hebart et al., 2023](https://doi.org/10.7554/eLife.82580) |
+| **Data access** | https://things-initiative.org |
+
+**Experiment**
+
+Participants viewed natural object images drawn from the THINGS object database while maintaining central fixation. 
+
+**Notes**
+
+- Large and systematically sampled object image set designed to study object representations across cortex.
+- Includes extensive **functional localizers and retinotopy**, enabling ROI-based analyses. 
 
 
 ### cNeuromod-THINGS
