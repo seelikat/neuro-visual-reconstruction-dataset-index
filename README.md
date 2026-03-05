@@ -369,7 +369,7 @@ A densely sampled single-participant fMRI dataset recorded during viewing of BBC
 - The stimuli are copyrighted and need to be constructed from the original Blu-ray discs (see criteria). 
 - Example reconstruction work: [Le et al., 2022 (Brain2Pix)](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2022.940972/full)
 
-### CNeuroMod video
+### cNeuroMod video
 
 | Attribute | Details |
 |---|---|
