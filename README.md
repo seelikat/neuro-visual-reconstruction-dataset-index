@@ -131,7 +131,7 @@ Two participants viewed natural grayscale images while maintaining fixation. Ima
 | **Visual field coverage** | ~9° |
 | **ROIs** | V1 and V2 |
 | **Main publications** | [Schoenmakers et al., 2013](https://doi.org/10.1016/j.neuroimage.2013.07.043), [Schoenmakers et al., 2015](https://doi.org/10.3389/fncom.2014.00173) |
-| **Data access** | [Donders Repository dataset page](https://doi.org/10.34973/7201-s161) |
+| **Data access** | [Donders Repository](https://doi.org/10.34973/7201-s161) |
 
 **Experiment**
 
@@ -347,8 +347,8 @@ Three participants viewed natural movie trailers at half speed while maintaining
 
 | Attribute | Details |
 |---|---|
-| **Stimulus type** | naturalistic video (TV series episodes) |
-| **Stimuli** | ~23 hours (~120,000 fMRI images) of continuous video (30 episodes) |
+| **Stimulus type** | naturalistic video (TV series) |
+| **Stimuli** | 30 episodes, ~23 hours (~120,000 fMRI images) |
 | **Fixation** | yes |
 | **Repetitions** | train: 1×, test: 22–26× |
 | **Subjects** | 1 |
@@ -374,7 +374,7 @@ A densely sampled single-participant fMRI dataset recorded during viewing of BBC
 | Attribute | Details |
 |---|---|
 | **Stimulus type** | naturalistic videos (movies, TV series) |
-| **Stimuli** | 7 seasons of friends, 10 movies |
+| **Stimuli** | 7 seasons of Friends, 10 movies |
 | **Fixation** | no |
 | **Repetitions** | 1× |
 | **Subjects** | 6 |
