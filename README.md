@@ -5,19 +5,19 @@ This repository indexes open neuroimaging datasets for reconstructing visual per
 This guide is primarily aimed at researchers from AI and machine learning backgrounds who may not be familiar with neuroimaging methodology. Reconstruction from neuroimaging data has recently gained popularity at major AI conferences, but many approaches fall into **common traps** that are well known within neuroscience. These pitfalls can lead to misleading results, often due to misunderstandings about the nature of fMRI data or the limitations of datasets originally collected for other research questions. For a detailed discussion of such issues in recent reconstruction pipelines, see: Shirakawa, K. et al. (2025). [*Spurious reconstruction from brain activity*](https://www.sciencedirect.com/science/article/pii/S0893608025003946), _Neural Networks_ .
 
 ## Table of Contents
-1. [Basics: Identification vs. Decoding vs. Reconstruction](#basic-distinction)
+1. [Basics: Identification vs. Decoding vs. Reconstruction](#basics-identification-vs-decoding-vs-reconstruction)
 2. [Criteria for Reconstruction Datasets](#criteria-for-reconstruction-datasets)
 3. [Image Stimulus Datasets](#image-stimulus-datasets)
    - [vim-1](#vim-1)
    - [BRAINS](#brains)
    - [Miyawaki Dataset](#miyawaki-dataset)
    - [BOLD5000](#bold5000)
-   - [GOD - Generic Object Decoding](#god-generic-object-decoding)
-   - [NSD - Natural Scenes Dataset](#nsd-natural-scenes-dataset)
-   - [THINGS-fMRI](#things--fmri)
+   - [Generic Object Decoding](#generic-object-decoding)
+   - [Natural Scenes Dataset](#natural-scenes-dataset)
+   - [THINGS-fMRI](#things-fmri)
    - [cNeuromod-THINGS](#cneuromod-things)
 4. [Video Stimulus Datasets](#video-stimulus-datasets)
-   - [vim-2 – Naturalistic Video Clips](#vim-2)
+   - [vim-2](#vim-2)
    - [Doctor Who Dataset](#doctor-who-dataset)
    - [cNeuromod Video](#cneuromod-video)
    - [fMRI Data and Hemodynamic Delay](#fmri-data-and-hemodynamic-delay)
@@ -197,7 +197,7 @@ Participants viewed natural images drawn from three common computer vision datas
 - Large and diverse stimulus set covering scenes, multi-object scenes, and single-object images.   
 - Uses a slow fMRI design, which produces relatively clean single-trial BOLD responses.
 
-### GOD - Generic Object Decoding
+### Generic Object Decoding
 
 ![Generic Object Decoding samples](horikawa_samples.png)
 
@@ -229,7 +229,7 @@ Participants viewed natural object images from ImageNet categories while maintai
 Because the test categories are not present during training, this dataset provides a useful benchmark for evaluating whether reconstruction models can generalize beyond the training categories. A small set of non-naturalistic abstract stimuli (e.g., a cross) from this data has been used widely to demonstrate reconstruction capability outside the (naturalistic) training distributions. 
 
 
-### NSD - Natural Scenes Dataset
+### Natural Scenes Dataset
 
 | Attribute | Details |
 |---|---|
@@ -383,7 +383,6 @@ A densely sampled single-participant fMRI dataset recorded during viewing of BBC
 | **Voxel size** | ~2mm isotropic |
 | **TR** | 1.49s |
 | **Visual field coverage** | ~10° |
-| **Fixation** | no fixation |
 | **Data access** | https://www.cneuromod.ca/ |
 
 **Experiment**
