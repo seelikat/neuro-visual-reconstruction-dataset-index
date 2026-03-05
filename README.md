@@ -48,7 +48,7 @@ These terms are now often conflated. In foundational reconstruction and decoding
 - **Reconstruction (open-set stimulus inference)**  
   Reconstruction aims to rebuild the stimulus itself from brain activity, generalizing to **novel stimuli outside the training set**. Because the space of possible visual stimuli is essentially infinite, this is a substantially harder problem than decoding or identification.
 
-  A long-term motivation for reconstruction research is the possibility of recovering **internally generated visual experiences**, such as mental imagery or even [**dreams**](https://www.science.org/doi/10.1126/science.1234330). In these settings there is obviously no predefined candidate set of images to choose from.
+  A long-term motivation for reconstruction research is the possibility of recovering [internally generated visual experiences](https://www.science.org/doi/abs/10.1126/sciadv.adj3906), such as mental imagery or even [**dreams**](https://www.science.org/doi/10.1126/science.1234330). In these settings there is obviously no predefined candidate set of images to choose from.
 
 
 ## Criteria for Reconstruction Datasets
