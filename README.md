@@ -68,7 +68,7 @@ Here are suggested criteria to take into account when evaluating whether to use 
   Visual field coverage determines how much of the visual cortex map is stimulated. Larger stimuli (=higher visual field coverage) that cover more of the visual field activate a larger portion. For reconstruction research this matters greatly. When stimuli cover more of the visual field, voxels carry more fine-grained visual information, particularly in early visual cortex. Datasets with larger visual field coverage are therefore generally preferred for reconstruction.
 
 - **Voxel size**  
-  Essentially the pixel resolution of the recordings. Stronger scanner magnetic fields (e.g. 7T) will allow for smaller voxels. 
+  The spatial resolution (pixel size) of the recordings. Stronger scanner magnetic fields (e.g. 7T) will allow for smaller voxels which enables more fine-grained analyses. 
 
 - **Fixation**  
   Most visual neuroimaging experiments require participants to **fixate on a point in the center of the screen** during stimulus presentation. This is important because large parts of the visual system are retinotopically organized (a distorted retina-reflecting map). If participants freely move their eyes, the same image stimulates different parts of this cortical map. Eye movements can introduce strong confounds: models may end up decoding eye position on the cortical map and not stimulus-related cortical patterns. There is debate about the strict necessity of fixation though. It also reduces natural viewing behavior and may suppress activity in higher-level visual areas. In general, reconstruction on free-viewing datasets should be approached with caution.
@@ -101,6 +101,7 @@ Here are suggested criteria to take into account when evaluating whether to use 
 | **Subjects** | 2 |
 | **Visual coverage** | circularly masked images |
 | **Brain regions** | visual cortex V1-V4, LatOcc, extrastriate (unspecified) regions |
+| **Voxel size** | 2.0 mm³ isotropic |
 | **Main publication** | [Kay et al., 2008](https://doi.org/10.1038/nature06713) |
 | **Data access** | [CRCNS dataset page](https://crcns.org/data-sets/vc/vim-1) |
 
@@ -126,6 +127,7 @@ Two participants viewed natural grayscale images while maintaining fixation. Ima
 | **Repetitions** | train: 2×, test: 2× |
 | **Subjects** | 2 |
 | **Brain coverage** | 3T early visual cortex |
+| **Voxel size** | 2.0 mm³ isotropic |
 | **ROIs** | V1 and V2 |
 | **Main publications** | [Schoenmakers et al., 2013](https://doi.org/10.1016/j.neuroimage.2013.07.043) [Schoenmakers et al., 2015](https://doi.org/10.3389/fncom.2014.00173) |
 | **Data access** | [Donders Repository dataset page](https://doi.org/10.34973/7201-s161) |
@@ -157,6 +159,7 @@ The stimulus space is MNIST-like structured and small. Reconstruction experiment
 | **Brain coverage** | 3T partial visual system |
 | **ROIs** | V1, V2 |
 | **Visual field coverage** | ~12° |
+| **Voxel size** | 3.0 mm³ isotropic |
 | **Main publication** | [Miyawaki et al., 2008](https://doi.org/10.1016/j.neuron.2008.11.004) |
 | **Data access** | [brainliner data page](http://brainliner.jp/data/brainliner/Visual_Image_Reconstruction) |
 
@@ -179,7 +182,8 @@ One of the first demonstrations of explicit visual _reconstruction_ from human f
 | **Subjects** | 4 |
 | **Brain coverage** | 3T whole-brain |
 | **ROIs** | visual cortex |
-| **Visual field coverage** | ~4.6° visual angle |
+| **Visual field coverage** | ~4.6° |
+| **Voxel size** | 2.0 mm³ isotropic |
 | **Main publication** | [Chang et al., 2019](https://doi.org/10.1038/s41597-019-0052-3) |
 | **Data access** | https://bold5000.org |
 
@@ -204,8 +208,9 @@ Participants viewed natural images drawn from three common computer vision datas
 | **Repetitions** | train: 5×, test: 35× |
 | **Subjects** | 5 |
 | **Brain coverage** | 3T whole-brain |
+| **Voxel size** | 3.0 mm³ isotropic |
 | **ROIs** | visual cortex (early and higher visual areas) |
-| **Main publication** | [Horikawa & Kamitani, 2017](https://doi.org/10.1038/s41467-017-02365-8) |
+| **Main publication** | [Horikawa & Kamitani, 2017](https://doi.org/10.1038/ncomms15037) |
 | **Data access** | https://github.com/KamitaniLab/GenericObjectDecoding |
 
 **Experiment**
@@ -234,6 +239,7 @@ Because the test categories are not present during training, this dataset provid
 | **Subjects** | 8 |
 | **Scanner** | 7T fMRI (high-res) |
 | **Brain coverage** | whole brain |
+| **Voxel size** | 1.8 mm³ isotropic |
 | **Main publication** | [Allen et al., 2022](https://doi.org/10.1038/s41593-021-00962-x) |
 | **Data access** | https://naturalscenesdataset.org |
 
@@ -319,6 +325,7 @@ Three participants viewed natural movie trailers at half speed while maintaining
 | **Repetitions** | train: 1×, test: 22–26× |
 | **Subjects** | 1 |
 | **Brain coverage** | 3T whole-brain |
+| **Voxel size** | 2.4 mm³ isotropic |
 | **ROIs** | V1–V3, FFA, MT, language localizers |
 | **TR** | 700ms |
 | **Visual field coverage** | ~20° |
@@ -332,8 +339,7 @@ A densely sampled single-participant fMRI dataset recorded during viewing of BBC
 **Notes**
 - Deep single-brain dataset designed for end-to-end learning on neuroimaging data. 
 - The stimuli are copyrighted and need to be constructed from the original Blu-ray discs.
-- Example recons
-- truction work: [Le et al., 2022 (Brain2Pix)](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2022.940972/full)
+- Example reconstruction work: [Le et al., 2022 (Brain2Pix)](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2022.940972/full)
 
 ### CNeuroMod video
 
