@@ -226,7 +226,7 @@ Participants viewed natural object images from ImageNet categories while maintai
 
 **Note for reconstruction research**
 
-Because the test categories are not present during training, this dataset provides a useful benchmark for evaluating whether reconstruction models can generalize beyond the training categories. A small set of non-naturalistic abstract stimuli (e.g., a cross) from this data has been used widely to demonstrate reconstruction capability outside the (naturalistic) training distributions. 
+Because the test categories are not present during training, this dataset provides a useful benchmark for evaluating whether reconstruction models can generalize beyond the training categories. A small set of non-naturalistic abstract stimuli (e.g., crosses) from this data has been used widely and successfully to demonstrate reconstruction capability outside the (naturalistic) training distributions. 
 
 
 ### Natural Scenes Dataset
@@ -252,14 +252,14 @@ Participants viewed natural images from the **MS COCO dataset** during long-term
 
 **Notes**
 
-- One of the largest and highest-quality human fMRI datasets currently available.
+- Largest and highest-quality, highest resolution human fMRI datasets currently available.
 - Widely used for encoding models, representational analysis, and large-scale brain–DNN comparisons.
-- Provides whole-brain coverage, high spatial resolution (7T), and extensive metadata.
-- Includes additional resources such as an [imagery experiment](https://arxiv.org/abs/2506.06898) and [synthetic images](https://www.nature.com/articles/s41467-026-69345-9).
 
 **Note for reconstruction research**
 
-The dataset was _not originally designed for reconstruction experiments_. The standard train/test split contains strong semantic clustering and substantial similarity between training and test images within the same MS COCO categories. This can inflate apparent reconstruction performance (see [Shirakawa et al., 2025](https://www.sciencedirect.com/science/article/pii/S0893608025003946)). For reconstruction studies it is advisable to create alternative splits where test stimuli contain categories not present during training, or where semantic and visual overlap between training and test images is minimized.
+NSD includes additional resources such as an [imagery experiment](https://arxiv.org/abs/2506.06898) and [synthetic images](https://www.nature.com/articles/s41467-026-69345-9).
+
+The standard train/test split contains strong semantic clustering and substantial similarity between training and test images within the same MS COCO categories. This can inflate apparent reconstruction performance (see [Shirakawa et al., 2025](https://www.sciencedirect.com/science/article/pii/S0893608025003946)). For reconstruction studies it is advisable to create alternative splits where test stimuli contain categories not present during training, or where semantic and visual overlap between training and test images is minimized.
 
 
 ### THINGS-fMRI
@@ -367,7 +367,7 @@ A densely sampled single-participant fMRI dataset recorded during viewing of BBC
 
 **Notes**
 - Deep single-brain dataset designed for end-to-end learning on neuroimaging data. 
-- The stimuli are copyrighted and need to be constructed from the original Blu-ray discs.
+- The stimuli are copyrighted and need to be constructed from the original Blu-ray discs (see criteria). 
 - Example reconstruction work: [Le et al., 2022 (Brain2Pix)](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2022.940972/full)
 
 ### CNeuroMod video
@@ -387,7 +387,7 @@ A densely sampled single-participant fMRI dataset recorded during viewing of BBC
 
 **Experiment**
 
-The **Courtois NeuroMod project** is a long-term deep-sampling dataset where 6 participants were scanned extensively across many cognitive tasks over multiple years. Each subject contributed **~200 hours of fMRI recordings** across movie watching, language, memory, images and videogame tasks. It is the current largest dense single-brain fMRI dataset, designed to support neuroAI research across multiple cognitive domains.
+The **Courtois NeuroMod project** is a long-term deep-sampling dataset where 6 participants were scanned extensively across many cognitive tasks over multiple years. Each subject contributed **~200 hours of fMRI recordings** across movie watching, language, memory, images and videogame tasks. It is the current largest dense single-brain fMRI dataset, designed to support neuroAI research across many cognitive domains.
 
 **Note for reconstruction research**
 
