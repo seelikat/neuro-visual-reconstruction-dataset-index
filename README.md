@@ -7,7 +7,7 @@ This repository indexes open neuroimaging datasets for reconstructing visual per
 This guide is primarily aimed at researchers from AI and machine learning backgrounds who may not be familiar with neuroimaging methodology. Reconstruction from neuroimaging data has recently gained popularity at major AI conferences, but many approaches fall into **common traps** that are well known within neuroscience. These pitfalls can lead to misleading results, often due to misunderstandings about the nature of fMRI data or the limitations of datasets originally collected for other research questions. For a detailed discussion of such issues in recent reconstruction pipelines, see: Shirakawa, K. et al. (2025). [*Spurious reconstruction from brain activity*](https://www.sciencedirect.com/science/article/pii/S0893608025003946), _Neural Networks_.
 
 ## Table of Contents
-1. [Basics: Identification vs. Decoding vs. Reconstruction](#basics-identification-vs-decoding-vs-reconstruction)
+1. [Basics: Identification vs. Decoding vs. Reconstruction](#basics-decoding-vs-identification-vs-reconstruction)
 2. [Criteria for Reconstruction Datasets](#criteria-for-reconstruction-datasets)
 3. [Image Stimulus Datasets](#image-stimulus-datasets)
    - [vim-1](#vim-1)
@@ -25,7 +25,7 @@ This guide is primarily aimed at researchers from AI and machine learning backgr
    - [fMRI Data and Hemodynamic Delay](#fmri-data-and-hemodynamic-delay)
 
 
-## Basics: Identification vs. Decoding vs. Reconstruction
+## Basics: Decoding vs. Identification vs. Reconstruction
 
 These terms are now often conflated. In foundational reconstruction and decoding literature their separation has been strict for good reasons: the tasks differ in difficulty, failure modes, what can be concluded from a result and what a method can realistically achieve. 
 
