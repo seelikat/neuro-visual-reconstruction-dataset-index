@@ -264,6 +264,8 @@ The standard train/test split contains strong semantic clustering and substantia
 
 ### THINGS-fMRI
 
+![THINGS samples](things_samples.png)
+
 | Attribute | Details |
 |---|---|
 | **Stimulus type** | naturalistic object images (THINGS database) |
