@@ -376,7 +376,7 @@ A densely sampled single-participant fMRI dataset recorded during viewing of BBC
 | Attribute | Details |
 |---|---|
 | **Stimulus type** | naturalistic videos (movies, TV series) |
-| **Stimuli** | 7 seasons of Friends, 10 movies |
+| **Stimuli** | 6 seasons of Friends, 10h movies |
 | **Fixation** | no |
 | **Repetitions** | 1× |
 | **Subjects** | 6 |
@@ -388,7 +388,7 @@ A densely sampled single-participant fMRI dataset recorded during viewing of BBC
 
 **Experiment**
 
-The **Courtois NeuroMod project** is a long-term deep-sampling dataset where 6 participants were scanned extensively across many cognitive tasks over multiple years. Each subject contributed **~200 hours of fMRI recordings** across movie watching, language, memory, images and videogame tasks. It is the current largest dense single-brain fMRI dataset, designed to support neuroAI research across many cognitive domains.
+The **Courtois NeuroMod project** is a long-term deep-sampling dataset where 6 participants were scanned extensively across many cognitive tasks over multiple years. Each subject contributed **~200 hours of fMRI recordings** [across](https://www.cneuromod.ca/gallery/datasets/) movie watching, language, memory, images and videogame tasks. It is the current largest dense single-brain fMRI dataset, designed to support neuroAI research across many cognitive domains.
 
 **Note for reconstruction research**
 
