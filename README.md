@@ -80,8 +80,8 @@ Here are suggested criteria to take into account when evaluating whether to use 
 - **Number of subjects**  
   Fine-grained functional organization varies substantially across individuals. For this reason, many reconstruction projects prefer datasets with many images shown to few healthy individuals ([deep sampling](https://doi.org/10.1016/j.cobeha.2020.12.008)) rather than those with few images for many subjects. There are efforts to learn across-individuals.
 
-- **Copyright and availability of stimulus files**  
-  Reconstruction requires access to the original images or videos. Datasets where stimulus material cannot be redistributed (for example due to copyright restrictions) can be difficult to use in practice. Journals have occasionally required researchers to redraw copyrighted original stimuli by hand, or only show CC0/public domain images, which is not ideal for presenting reconstruction results.
+- **Copyright**  
+  Datasets where stimulus material cannot be redistributed (for example due to copyright restrictions) can be difficult to use for commercially published research in practice. Journals and publishers have occasionally required researchers to redraw copyrighted original stimuli by hand, or only show CC0/public domain images, which is not ideal for presenting reconstruction results.
 
 - **Smoothing in preprocessing**  
   Modern vision datasets tend to avoid this step, but do double-check whether spatial smoothing was applied. This standard fMRI step applies a Gaussian filter across voxels and effectively blurs your signal. For reconstruction (and other pattern-based analyses), this can destroy fine-grained spatial information. Note that as an ML researcher you may not easily be able to modify the extensive preprocessing and GLM pipeline yourself without assistance from someone with fMRI expertise, in order to exclude this step.
