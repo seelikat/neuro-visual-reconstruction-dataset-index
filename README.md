@@ -288,7 +288,9 @@ Participants viewed natural object images drawn from the THINGS object database 
 
 **Notes**
 
-- Large and systematically sampled object image set designed to study object representations across cortex. 
+- Large and systematically sampled object image set designed to study object representations across cortex.
+- Wide and systematically selected range of categories.
+- Very high quality images.
 
 
 ### cNeuromod-THINGS
@@ -312,6 +314,7 @@ Participants viewed object images from the THINGS object database while maintain
 
 **Notes**  
 - Part of the [CNeuroMod deep-phenotyping project](https://www.cneuromod.ca), where a small number of participants are scanned extensively across tasks like video watching, narratives, video games, and other tasks.
+- Same underlying high quality stimulus database as THINGS-fMRI.
 
 **Note for reconstruction research**  
 Because the dataset uses the same participants as the cNeuromod project, models can potentially be trained on all its visual data. Note that cNeuromod-THINGS uses central fixation, while several other cNeuromod recordings use natural viewing (see criteria).
