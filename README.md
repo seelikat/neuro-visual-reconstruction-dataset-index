@@ -2,7 +2,7 @@
 
 This repository indexes open neuroimaging datasets for reconstructing visual perception **from human fMRI data**. 
 
-This guide is primarily aimed at researchers from AI and machine learning backgrounds who may not be familiar with neuroimaging methodology. Reconstruction from neuroimaging data has recently gained popularity at major AI conferences, but many approaches fall into **common traps** that are well known within neuroscience. These pitfalls can lead to misleading results, often due to misunderstandings about the nature of fMRI data or the limitations of datasets originally collected for other research questions. For a detailed discussion of such issues in recent reconstruction pipelines, see: Shirakawa, K. et al. (2025). [*Spurious reconstruction from brain activity*](https://www.sciencedirect.com/science/article/pii/S0893608025003946), _Neural Networks_ .
+This guide is primarily aimed at researchers from AI and machine learning backgrounds who may not be familiar with neuroimaging methodology. Reconstruction from neuroimaging data has recently gained popularity at major AI conferences, but many approaches fall into **common traps** that are well known within neuroscience. These pitfalls can lead to misleading results, often due to misunderstandings about the nature of fMRI data or the limitations of datasets originally collected for other research questions. For a detailed discussion of such issues in recent reconstruction pipelines, see: Shirakawa, K. et al. (2025). [*Spurious reconstruction from brain activity*](https://www.sciencedirect.com/science/article/pii/S0893608025003946), _Neural Networks_.
 
 ## Table of Contents
 1. [Basics: Identification vs. Decoding vs. Reconstruction](#basics-identification-vs-decoding-vs-reconstruction)
@@ -38,7 +38,7 @@ These terms are now often conflated. In foundational reconstruction and decoding
 - **Decoding (category level)**  
  Decoding refers to predicting (classifying) pre-defined labels or cognitive states from brain activity patterns. This type of classification has long been used for [neuroscientific insight](https://www.cell.com/neuron/fulltext/S0896-6273(15)00432-8). In multivariate pattern analysis (MVPA), voxel activity patterns are treated as feature vectors and classifiers are trained to distinguish experimental conditions (for example risky vs. safe decision, add vs. subtract, rule A vs. rule B).
 
-  Decoding is scientifically useful because it tests whether information about a stimulus or mental state is present in a brain region. However, this is constrained to a predefined closed set, arbitrary mind or visual content can not be recovered. 
+  Decoding is scientifically useful because it tests whether and how information about a stimulus or mental state is present in a brain region. However, this is constrained to a predefined closed set, arbitrary mind or visual content can not be recovered. 
 
   Many recent papers labeled as “reconstruction” are effectively performing n-way decoding: they decode a category and then use a generative model to produce a visually plausible sample inside the predicted class. This can look convincing, but remains a restricted classification problem. Similar n-way decoding setups have long been standard in the MVPA literature and can achieve quite high performance when the candidate set is limited.
 
