@@ -235,8 +235,8 @@ Because the test categories are not present during training, this dataset provid
 
 | Attribute | Details |
 |---|---|
-| **Stimulus type** | natural color images (MS COCO) |
-| **Stimuli** | ~73,000 unique images total |
+| **Stimulus type** | natural color images (MS COCO, 80 categories) |
+| **Stimuli** | ~73,000 images across 8 participants |
 | **Fixation** | yes |
 | **Images per subject** | ~10,000 unique images |
 | **Repetitions** | 3× both train/test |
