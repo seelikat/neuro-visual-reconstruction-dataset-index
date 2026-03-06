@@ -231,6 +231,8 @@ Because the test categories are not present during training, this dataset provid
 
 ### Natural Scenes Dataset
 
+![NSD samples](nsd_samples.png)
+
 | Attribute | Details |
 |---|---|
 | **Stimulus type** | natural color images (MS COCO) |
