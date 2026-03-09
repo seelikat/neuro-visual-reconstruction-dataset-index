@@ -432,4 +432,4 @@ K. Seeliger (2026). Neuro-Visual Reconstruction Dataset Index (v1.0). Zenodo. [h
 academic website and contact: 
 [seelikat.github.io](seelikat.github.io)
 
-_If you know of additional datasets or have corrections, please open an issue or start a discussion._
+_If you know of additional datasets or have corrections, please send me a mail, open an issue or start a discussion._
