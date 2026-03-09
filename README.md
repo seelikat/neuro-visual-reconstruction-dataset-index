@@ -254,7 +254,7 @@ Participants viewed natural images from the **MS COCO dataset** during long-term
 
 **Notes**
 
-- Largest and highest-quality, highest resolution human fMRI datasets currently available.
+- Largest and highest-quality, highest resolution human fMRI dataset on static images currently available.
 - Widely used for encoding models, representational analysis, and large-scale brain–DNN comparisons.
 
 **Note for reconstruction research**
