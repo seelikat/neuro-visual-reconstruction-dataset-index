@@ -373,7 +373,7 @@ A densely sampled single-participant fMRI dataset recorded during viewing of BBC
 
 **Notes**
 - Deep single-brain dataset designed for end-to-end learning on neuroimaging data. 
-- The stimuli are copyrighted and need to be constructed from the original Blu-ray discs (see criteria). 
+- The stimulus files are copyrighted and need to be constructed from the original Blu-ray discs (see criteria). 
 - Example reconstruction work: [Le et al., 2022 (Brain2Pix)](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2022.940972/full)
 
 ### cNeuroMod video
